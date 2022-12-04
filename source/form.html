@@ -60,21 +60,33 @@
           </div>
 
           <fieldset class="fields__goals goals">
-            <input class="goals__input" type="radio" name="weightloss" id="weightloss" checked><span
-              class="visually-hidden"></span>
-            <span class="goals__headline headline">Похудение</span>
-            <input class="goals__input" type="radio" name="weightgrow" id="weightgrow"><span
-              class="visually-hidden"></span> <span class="goals__headline headline">Набор массы</span>
-            <input class="goals__input" type="radio" name="nevermind" id="nevermind"><span
-              class="visually-hidden"></span> <span class="goals__headline headline">Не знаю (нужен
-              ваш совет)</span>
+            <label class="goals__label">
+              <input class="goals__input" type="radio" name="weightloss" id="weightloss" checked>
+              <span class="visually-hidden"></span>
+              <span class="goals__headline headline">Похудение</span>
+            </label>
+
+            <label class="goals__label">
+              <input class="goals__input" type="radio" name="weightgrow" id="weightgrow">
+              <span class="visually-hidden"></span>
+              <span class="goals__headline headline">Набор массы</span>
+            </label>
+
+            <label class="goals__label">
+              <input class="goals__input" type="radio" name="nevermind" id="nevermind">
+              <span class="visually-hidden"></span>
+              <span class="goals__headline headline">Не знаю (нужен
+                ваш совет)</span>
+            </label>
           </fieldset>
 
           <fieldset class="fields__owner owner">
             <legend>Контактные данные (владельца кота)</legend>
+
             <label class="owner__label">E-MAIL:*
               <input class="owner__input" type="email" name="e-mail" id="e-mail" value="kuklachev@gmail.com" required>
             </label>
+
             <label class="owner__label">ТЕЛЕФОН:*
               <input class="owner__input" type="tel" name="phone" id="phone" value="8 (960) 900-60-90" required>
             </label>
@@ -88,14 +100,30 @@
 
           <fieldset class="fields__additional additional">
             <legend>Дополнительно</legend>
-            <input class="additional__input" type="checkbox" name="insulin" id="insulin" checked><span
-              class="visually-hidden"></span> <span class="additional__headline headline">сахарозаменитель</span>
-            <input class="additional__input" type="checkbox" name="water" id="water"><span
-              class="visually-hidden"></span> <span class="additional__headline headline">питьевая вода</span>
-            <input class="additional__input" type="checkbox" name="milk" id="milk"><span class="visually-hidden"></span>
-            <span class="additional__headline headline">молоко</span>
-            <input class="additional__input" type="checkbox" name="vitamins" id="vitamins"><span
-              class="visually-hidden"></span> <span class="additional__headline headline">витамины</span>
+
+            <label class="additional__label">
+              <input class="additional__input" type="checkbox" name="insulin" id="insulin" checked>
+              <span class="visually-hidden"></span>
+              <span class="additional__headline headline">сахарозаменитель</span>
+            </label>
+
+            <label class="additional__label">
+              <input class="additional__input" type="checkbox" name="water" id="water">
+              <span class="visually-hidden"></span>
+              <span class="additional__headline headline">питьевая вода</span>
+            </label>
+
+            <label class="additional__label">
+              <input class="additional__input" type="checkbox" name="milk" id="milk">
+              <span class="visually-hidden"></span>
+              <span class="additional__headline headline">молоко</span>
+            </label>
+
+            <label class="additional__label">
+              <input class="additional__input" type="checkbox" name="vitamins" id="vitamins">
+              <span class="visually-hidden"></span>
+              <span class="additional__headline headline">витамины</span>
+            </label>
           </fieldset>
 
           <button class="nav__link headline headline--white" type="submit">отправить заявку</button>
