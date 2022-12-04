@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cat Energy Form</title>
+  <title>Cat Energy Catalog</title>
 </head>
 
 <body>
@@ -13,23 +13,23 @@
     <div class="header__wrap">
       <div class="header__logo logo">
         <a class="logo__link" href="#">
-          <img class="logo__img" src="/catenergy/img/icon/header__logo-mobile.svg" alt="Иконка Cat Energy." width="33"
-            height="38">
-          <img class="logo__img" src="/catenergy/img/icon/header__logo--mobile-text.svg" alt="Cat Energy." width="101"
-            height="18">
+          <img class="logo__img" src="/catenergy/img/icon/header__logo-mobile.svg" width="140" height="112"
+            alt="Иконка Cat Energy." width="33" height="38">
+          <img class="logo__img" src="/catenergy/img/icon/header__logo--mobile-text.svg" width="140" height="112"
+            alt="Cat Energy." width="101" height="18">
         </a>
       </div>
       <div class="header__nav nav">
         <button class="nav__toogle"><span class="visually-hidden">показать/скрыть меню</span></button>
         <ul class="nav__list">
           <li class="nav__item">
-            <a class="nav__link headline headline--white" href="#">Главная</a>
+            <a class="nav__link headline headline--white nav__link--current" href="#">Главная</a>
           </li>
           <li class="nav__item">
             <a class="nav__link headline headline--white" href="#">Каталог продукции</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link headline headline--white nav__link--current" href="#">Подбор программы</a>
+            <a class="nav__link headline headline--white" href="#">Подбор программы</a>
           </li>
         </ul>
       </div>
@@ -39,70 +39,189 @@
   <main class="page__main main">
     <div class="main__wrap">
 
-      <section class="main__form">
-        <h1 class="form__title title">Подбор программы</h1>
-        <p class="form__headline headline">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+      <section class="main__catalog catalog">
+        <h1 class="promo__title">Каталог продукции</h1>
 
-        <form class="form__fields fields" action="https://echo.htmlacademy.ru" method="get">
+        <ul class="catalog__cards cards">
+          <li class="catalog__card card">
+            <p class="card__title headline">Cat Energy PRO 500 г</p>
+            <img class="card__img" src="/img/chicken500.webp" width="140" height="112" width="140" height="112"
+              alt="Изображение Cat Energy PRO 500 г. со вкусом курицы.">
+            <dl class="card__characters">
+              <dt class="card__components text">Масса</dt>
+              <dd class="card__description text">500 г</dd>
 
-          <div class="fields__registr registr">
-            <label class="registr__label">имя:*
-              <input class="registr__input" type="text" name="cat-name" id="cat-name" value="Барсик" required>
-            </label>
+              <dt class="card__components text">Вкус</dt>
+              <dd class="card__description text">Курица</dd>
 
-            <label class="registr__label">вес (кг):*
-              <input class="registr__input" type="number" name="cat-weight" id="cat-weight" value="7" required>
-            </label>
+              <dt class="card__components text">Цена</dt>
+              <dd class="card__description text">700 Р.</dd>
+            </dl>
 
-            <label class="registr__label">возраст (лет):*
-              <input class="registr__input" type="number" name="cat-age" id="cat-age" value="7">
-            </label>
-          </div>
+            <button class="card__button headline headline--white">Заказать</button>
+          </li>
 
-          <fieldset class="fields__goals goals">
-            <input class="goals__input" type="radio" name="weightloss" id="weightloss" checked><span
-              class="visually-hidden"></span>
-            <span class="goals__headline headline">Похудение</span>
-            <input class="goals__input" type="radio" name="weightgrow" id="weightgrow"><span
-              class="visually-hidden"></span> <span class="goals__headline headline">Набор массы</span>
-            <input class="goals__input" type="radio" name="nevermind" id="nevermind"><span
-              class="visually-hidden"></span> <span class="goals__headline headline">Не знаю (нужен
-              ваш совет)</span>
-          </fieldset>
+          <li class="catalog__card card">
+            <p class="card__title headline">Cat Energy PRO 1000 г</p>
+            <img class="card__img" src="/img/chicken1000.webp" width="140" height="112"
+              alt="Изображение Cat Energy PRO 1000 г. со вкусом курицы.">
+            <dl class="card__characters">
+              <dt class="card__components text">Масса</dt>
+              <dd class="card__description text">1000 г</dd>
 
-          <fieldset class="fields__owner owner">
-            <legend>Контактные данные (владельца кота)</legend>
-            <label class="owner__label">E-MAIL:*
-              <input class="owner__input" type="email" name="e-mail" id="e-mail" value="kuklachev@gmail.com" required>
-            </label>
-            <label class="owner__label">ТЕЛЕФОН:*
-              <input class="owner__input" type="tel" name="phone" id="phone" value="8 (960) 900-60-90" required>
-            </label>
-          </fieldset>
+              <dt class="card__components text">Вкус</dt>
+              <dd class="card__description text">Курица</dd>
 
-          <fieldset class="fields__comments comments">
-            <legend>Комментарий</legend>
-            <textarea class="additional__text" name="about" id="about" cols="30"
-              rows="6">Расскажите обо всех повадках кота</textarea>
-          </fieldset>
+              <dt class="card__components text">Цена</dt>
+              <dd class="card__description text">1000 Р.</dd>
+            </dl>
+            <button class="card__button headline headline--white">Заказать</button>
+          </li>
 
-          <fieldset class="fields__additional additional">
-            <legend>Дополнительно</legend>
-            <input class="additional__input" type="checkbox" name="insulin" id="insulin" checked><span
-              class="visually-hidden"></span> <span class="additional__headline headline">сахарозаменитель</span>
-            <input class="additional__input" type="checkbox" name="water" id="water"><span
-              class="visually-hidden"></span> <span class="additional__headline headline">питьевая вода</span>
-            <input class="additional__input" type="checkbox" name="milk" id="milk"><span class="visually-hidden"></span>
-            <span class="additional__headline headline">молоко</span>
-            <input class="additional__input" type="checkbox" name="vitamins" id="vitamins"><span
-              class="visually-hidden"></span> <span class="additional__headline headline">витамины</span>
-          </fieldset>
 
-          <button class="nav__link headline headline--white" type="submit">отправить заявку</button>
+          <li class="catalog__card card">
+            <p class="card__title headline">Cat Energy PRO 500 г</p>
+            <img class="card__img" src="/img/fish500.webp" width="140" height="112"
+              alt="Изображение Cat Energy PRO 500 г. со вкусом рыбы.">
+            <dl class="card__characters">
+              <dt class="card__components text">Масса</dt>
+              <dd class="card__description text">500 г</dd>
 
-          <p class="fields__text text">* — Обязательные поля</p>
-        </form>
+              <dt class="card__components text">Вкус</dt>
+              <dd class="card__description text">Рыба</dd>
+
+              <dt class="card__components text">Цена</dt>
+              <dd class="card__description text">700 Р.</dd>
+            </dl>
+            <button class="card__button headline headline--white">Заказать</button>
+          </li>
+
+
+          <li class="catalog__card card">
+            <p class="card__title headline">Cat Energy PRO 1000 г</p>
+            <img class="card__img" src="/img/fish1000.webp" width="140" height="112"
+              alt="Изображение Cat Energy PRO 1000 г. со вкусом рыбы.">
+            <dl class="card__characters">
+              <dt class="card__components text">Масса</dt>
+              <dd class="card__description text">1000 г</dd>
+
+              <dt class="card__components text">Вкус</dt>
+              <dd class="card__description text">Рыба</dd>
+
+              <dt class="card__components text">Цена</dt>
+              <dd class="card__description text">1000 Р.</dd>
+            </dl>
+            <button class="card__button headline headline--white">Заказать</button>
+          </li>
+
+
+          <li class="catalog__card card">
+            <p class="card__title headline">Cat Energy Slim 500 г</p>
+            <img class="card__img" src="/img/cereal500.webp" width="140" height="112"
+              alt="Изображение Cat Energy PRO 500 г. со вкусом гречки.">
+            <dl class="card__characters">
+              <dt class="card__components text">Масса</dt>
+              <dd class="card__description text">500 г</dd>
+
+              <dt class="card__components text">Вкус</dt>
+              <dd class="card__description text">Гречка</dd>
+
+              <dt class="card__components text">Цена</dt>
+              <dd class="card__description text">400 Р.</dd>
+            </dl>
+            <button class="card__button headline headline--white">Заказать</button>
+          </li>
+
+
+          <li class="catalog__card card">
+            <p class="card__title headline">Cat Energy Slim 1000 г</p>
+            <img class="card__img" src="/img/cereal1000.webp" width="140" height="112"
+              alt="Изображение Cat Energy PRO 1000 г. со вкусом гречки.">
+            <dl class="card__characters">
+              <dt class="card__components text">Масса</dt>
+              <dd class="card__description text">1000 г</dd>
+
+              <dt class="card__components text">Вкус</dt>
+              <dd class="card__description text">Гречка</dd>
+
+              <dt class="card__components text">Цена</dt>
+              <dd class="card__description text">700 Р.</dd>
+            </dl>
+            <button class="card__button headline headline--white">Заказать</button>
+          </li>
+
+          <li class="catalog__card card">
+            <p class="card__title headline">Cat Energy Slim 500 г</p>
+            <img class="card__img" src="/img/rice500.webp" width="140" height="112"
+              alt="Изображение Cat Energy PRO 500 г. со вкусом риса.">
+            <dl class="card__characters">
+              <dt class="card__components text">Масса</dt>
+              <dd class="card__description text">500 г</dd>
+
+              <dt class="card__components text">Вкус</dt>
+              <dd class="card__description text">Курица</dd>
+
+              <dt class="card__components text">Цена</dt>
+              <dd class="card__description text">500 Р.</dd>
+            </dl>
+            <button class="card__button headline headline--white">Заказать</button>
+          </li>
+
+          <li class="catalog__more more">
+            <p class="card__title headline">Показать еще 100500 товаров</p>
+            <p class="more__subtitle text">На самом деле вкусов гораздо больше!</p>
+            <button class="card__button headline headline__gray"></button>
+          </li>
+        </ul>
       </section>
+
+      <section class="main__additional additional">
+        <h2 class="additional__title subject">Дополнительные товары</h2>
+        <ul class="additional__cards cards">
+
+          <li class="additional__card card">
+            <p class="card__title headline">Сахарозаменитель</p>
+            <dl class="card__characters">
+              <dt class="card__components text">1 упаковка (100 г)</dt>
+              <dd class="card__description text">200 Р.</dd>
+            </dl>
+            <button class="card__button headline headline--white">Заказать</button>
+          </li>
+
+          <li class="additional__card card">
+            <p class="card__title headline">Питьевая вода</p>
+            <dl class="card__characters">
+              <dt class="card__components text">5 литров</dt>
+              <dd class="card__description text">50 Р.</dd>
+            </dl>
+            <button class="card__button headline headline--white">Заказать</button>
+          </li>
+
+          <li class="additional__card card">
+            <p class="card__title headline">Молоко</p>
+            <dl class="card__characters">
+              <dt class="card__components text">1 литр</dt>
+              <dd class="card__description text">100 Р.</dd>
+            </dl>
+            <button class="card__button headline headline--white">Заказать</button>
+          </li>
+
+          <li class="additional__card card">
+            <p class="card__title headline">Витамины</p>
+            <dl class="card__characters">
+              <dt class="card__components text">1 упаковка (30 г)</dt>
+              <dd class="card__description text">300 Р.</dd>
+            </dl>
+            <button class="card__button headline headline--white">Заказать</button>
+          </li>
+        </ul>
+      </section>
+
+
+      <article class="main__adv adv">
+        <p class="adv__text">Закажите все и получите чехол для кота в подарок!</p>
+      </article>
+
 
       <section class="main__location location">
         <h2 class="location__title visually-hidden">Наш адрес</h2>
@@ -117,10 +236,8 @@
             referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </section>
-
     </div>
   </main>
-
 
   <footer class="page__footer footer">
     <div class="footer__wrap">
@@ -193,8 +310,6 @@
 
     </div>
   </footer>
-
-
 </body>
 
 </html>
