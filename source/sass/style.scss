@@ -1,10 +1,11 @@
 // Начните писать стили здесь
 @import "scss__blocks/font.scss";
-@import "scss__blocks/header.scss"
+@import "scss__blocks/header.scss";
 @import "scss__blocks/promo.scss";
 
 body {
    background: white;
    font-family: "Oswald", "Arial", sans-serif;
    font-weight: 400;
+   font-size: 14px;
 }

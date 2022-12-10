@@ -5,6 +5,7 @@
    height: 302px;
    &::before{
       position: absolute;
+      content: "";
       background-image: url(/img/promo__front.webp);
       width: 280px;
       height: 270px;

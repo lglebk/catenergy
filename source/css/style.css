@@ -12,9 +12,30 @@
   font-style: normal;
   font-display: swap;
 }
+.header {
+  margin: 0 auto;
+}
+
+.promo {
+  position: relative;
+  background-image: url(/img/promo__background.webp);
+  width: 320px;
+  height: 302px;
+}
+.promo::before {
+  position: absolute;
+  content: "";
+  background-image: url(/img/promo__front.webp);
+  width: 280px;
+  height: 270px;
+  top: 0;
+  left: 0;
+}
+
 body {
   background: white;
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
+  font-size: 14px;
 }
 /*# sourceMappingURL=style.css.map */
