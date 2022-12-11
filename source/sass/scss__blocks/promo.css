@@ -1,0 +1,15 @@
+.promo {
+  position: relative;
+  background-image: url(/img/promo__background.webp);
+  width: 320px;
+  height: 302px;
+}
+.promo::before {
+  position: absolute;
+  content: "";
+  background-image: url(/img/promo__front.webp);
+  width: 280px;
+  height: 270px;
+  top: 0;
+  left: 0;
+}/*# sourceMappingURL=promo.css.map */

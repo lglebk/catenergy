@@ -1,0 +1,10 @@
+.header__wrap {
+  padding: 10px 20px 18px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.logo__img:first-child {
+  margin-right: 55px;
+}/*# sourceMappingURL=header.css.map */
