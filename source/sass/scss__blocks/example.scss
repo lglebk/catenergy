@@ -1,0 +1,69 @@
+.example {
+   background-color: #eaeaea;
+}
+
+.example__title {
+   padding-top: 25px;
+   padding-bottom: 40px;
+}
+
+.example__text {
+   margin-bottom: 20px;
+}
+
+.example__statistic {
+   display: grid;
+   grid-template-columns: 124px 124px;
+   grid-template-rows: 56px;
+   column-gap: 32px;
+   margin-bottom: 20px;
+}
+
+.example__metrics {
+   width: 124px;
+   text-align: center;
+   border: solid 1px #cdcdcd;
+   border-radius: 3px;
+   margin: 0;
+   padding: 0;
+}
+
+.example__metric {
+   font-size: 24px;
+   line-height: 100%;
+   text-transform: uppercase;
+   font-weight: 400;
+   padding: 15px 19px 18px;
+}
+
+.example__desc {
+   color: #c4c4c4;
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 12px;
+   line-height: 100%;
+   align-self: baseline;
+   margin-left: 30px;
+   text-align: center;
+}
+
+.example__headline {
+   text-align: center;
+   line-height: 20px;
+   margin-bottom: 40px;
+}
+
+.example__picture {
+   margin-bottom: 15px;
+   text-align: center;
+}
+
+.example__range {
+   text-align: center;
+   margin: 0 auto;
+}
+
+.example__range--input {
+   width: 85px;
+   height: 14px;
+   margin: 0 13px;
+}

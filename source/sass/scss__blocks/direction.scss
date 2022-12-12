@@ -1,3 +1,6 @@
+$basic-green: #68b738;
+$grey-bg: #f2f2f2;
+
 .direction__cards {
    display: flex;
    flex-wrap: wrap;
@@ -8,9 +11,9 @@
 
 .direction__card {
    list-style: none;
-   background-color: #f2f2f2;
+   background-color: $grey-bg;
    padding: 20px;
-   margin-bottom: 20px;
+   margin-top: 20px;
 }
 
 .direction__title {
@@ -25,7 +28,7 @@
       width: 50px;
       height: 50px;
       border-radius: 50%;
-      background-color: #68b738;
+      background-color: $basic-green;
       top: 0px;
       left: 0;
    }

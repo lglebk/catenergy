@@ -227,6 +227,7 @@ h1,
 h2,
 h3,
 ul,
+ol,
 li {
   margin: 0;
   padding: 0;
@@ -243,26 +244,22 @@ li {
   overflow: hidden;
 }
 
-.header__wrap {
-  padding: 10px 20px 18px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
 .logo__img:first-child {
   margin-right: 55px;
 }
 
-.promo {
-  padding-bottom: 20px;
+.logo__img:hover {
+  opacity: 0.8;
+}
+.logo__img:active {
+  opacity: 0.6;
 }
 
 .promo__background {
   position: relative;
   background-image: url(/img/promo__background.webp);
   background-repeat: no-repeat;
-  width: 320px;
+  width: 100%;
   height: 302px;
   margin-bottom: 138px;
 }
@@ -308,7 +305,7 @@ li {
   list-style: none;
   background-color: #f2f2f2;
   padding: 20px;
-  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .direction__title {
@@ -403,6 +400,152 @@ li {
   opacity: 0.5;
 }
 
+.explain__title {
+  margin-top: 20px;
+  padding-bottom: 40px;
+}
+
+.explain__list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 60px 200px;
+  grid-template-rows: auto auto auto auto;
+  gap: 20px;
+  padding-bottom: 50px;
+  position: relative;
+}
+
+.explain__item {
+  grid-column: 2/-1;
+}
+.explain__item::before {
+  position: absolute;
+  content: "";
+  width: 60px;
+  height: 60px;
+  background-color: #68b738;
+  grid-column: 1/2;
+  left: 0;
+}
+.explain__item:first-child:after {
+  position: absolute;
+  content: "";
+  width: 31px;
+  height: 31px;
+  background-image: url(/img/icon/leaf.svg);
+  background-repeat: no-repeat;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  left: 17px;
+  top: 15px;
+}
+.explain__item:nth-child(2):after {
+  position: absolute;
+  content: "";
+  width: 31px;
+  height: 31px;
+  background-image: url(/img/icon/boil.svg);
+  background-repeat: no-repeat;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  left: 15px;
+  top: 15px;
+}
+.explain__item:nth-child(3):after {
+  position: absolute;
+  content: "";
+  width: 31px;
+  height: 31px;
+  background-image: url(/img/icon/meal.svg);
+  background-repeat: no-repeat;
+  grid-column: 1/2;
+  grid-row: 3/4;
+  left: 17px;
+  top: 15px;
+}
+.explain__item:last-child:after {
+  position: absolute;
+  content: "";
+  width: 31px;
+  height: 31px;
+  background-image: url(/img/icon/alarm.svg);
+  background-repeat: no-repeat;
+  grid-column: 1/2;
+  grid-row: 4/5;
+  left: 14px;
+  top: 14px;
+}
+
+.example {
+  background-color: #eaeaea;
+}
+
+.example__title {
+  padding-top: 25px;
+  padding-bottom: 40px;
+}
+
+.example__text {
+  margin-bottom: 20px;
+}
+
+.example__statistic {
+  display: grid;
+  grid-template-columns: 124px 124px;
+  grid-template-rows: 56px;
+  column-gap: 32px;
+  margin-bottom: 20px;
+}
+
+.example__metrics {
+  width: 124px;
+  text-align: center;
+  border: solid 1px #cdcdcd;
+  border-radius: 3px;
+  margin: 0;
+  padding: 0;
+}
+
+.example__metric {
+  font-size: 24px;
+  line-height: 100%;
+  text-transform: uppercase;
+  font-weight: 400;
+  padding: 15px 19px 18px;
+}
+
+.example__desc {
+  color: #c4c4c4;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 100%;
+  align-self: baseline;
+  margin-left: 30px;
+  text-align: center;
+}
+
+.example__headline {
+  text-align: center;
+  line-height: 20px;
+  margin-bottom: 40px;
+}
+
+.example__picture {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.example__range {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.example__range--input {
+  width: 85px;
+  height: 14px;
+  margin: 0 13px;
+}
+
 body {
   background: white;
   font-family: "Oswald", "Arial", sans-serif;
@@ -410,6 +553,13 @@ body {
   font-size: 14px;
   margin: 0 auto;
   width: 320px;
+}
+
+.wrap {
+  padding: 10px 20px 18px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .title {
@@ -437,6 +587,7 @@ body {
 }
 
 .text {
+  font-family: Arial, Helvetica, sans-serif;
   line-height: 18px;
   color: #444444;
 }
@@ -449,5 +600,12 @@ body {
   display: block;
   box-sizing: border-box;
   text-align: center;
+}
+.button:hover {
+  background-color: #5eaa2f;
+}
+.button:active {
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.6);
 }
 /*# sourceMappingURL=style.css.map */
