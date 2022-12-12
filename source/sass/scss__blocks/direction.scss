@@ -1,0 +1,106 @@
+.direction__cards {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   margin: 0;
+   padding: 0;
+}
+
+.direction__card {
+   list-style: none;
+   background-color: #f2f2f2;
+   padding: 20px;
+   margin-bottom: 20px;
+}
+
+.direction__title {
+   padding-top: 10px;
+   padding-left: 72px;
+   font-style: italic;
+   font-weight: 400;
+   position: relative;
+   &::before {
+      position: absolute;
+      content: "";
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #68b738;
+      top: 0px;
+      left: 0;
+   }
+}
+
+.direction__card:first-child .direction__title::after {
+   position: absolute;
+   content: "";
+   background-image: url(/img/icon/cat-slim.svg);
+   background-repeat: no-repeat;
+   top: -3px;
+   left: 7px;
+   width: 36px;
+   height: 56px;
+}
+
+.direction__card:nth-child(2) .direction__title::after {
+   position: absolute;
+   content: "";
+   background-image: url(/img/icon/cat-masses.svg);
+   background-repeat: no-repeat;
+   bottom: 5px;
+   left: -10px;
+   width: 67px;
+   height: 28px;
+}
+
+.direction__text {
+   margin-bottom: 42px;
+   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+   position: relative;
+   &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      border: 1px solid #d9d9d9;
+      bottom: -23px;
+      left: 0;
+   }
+}
+
+.direction__link {
+   text-decoration: none;
+   font-size: 16px;
+   line-height: 16px;
+   color: #000;
+   font-style: italic;
+   position: relative;
+   &::after {
+      position: absolute;
+      content: "";
+      width: 18px;
+      border: 2px solid #000000;
+      left: 100px;
+      bottom: 8px;
+   }
+   &:hover::after {
+      width: 26px;
+   }
+   &::before {
+      position: absolute;
+      content: "";
+      width: 0px;
+      height: 0;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 9px solid #000;
+      transform: rotate(90deg);
+      left: 118px;
+      bottom: 5px;
+   }
+   &:hover::before {
+      left: 126px;
+   }
+   &:active {
+      opacity: 0.5;
+   }
+}

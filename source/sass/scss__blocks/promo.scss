@@ -1,15 +1,41 @@
-.promo{
+.promo {
+   padding-bottom: 20px;
+}
+
+.promo__background {
    position: relative;
    background-image: url(/img/promo__background.webp);
+   background-repeat: no-repeat;
    width: 320px;
    height: 302px;
-   &::before{
+   margin-bottom: 138px;
+   &::before {
       position: absolute;
       content: "";
       background-image: url(/img/promo__front.webp);
+      background-repeat: no-repeat;
       width: 280px;
       height: 270px;
-      top: 0;
-      left: 0;
+      top: 167px;
+      left: 20px;
    }
+}
+
+.promo__title {
+   padding: 27px 16px 25px;
+   margin: 0;
+   text-align: center;
+}
+
+.promo__title--white {
+   color: #fff;
+}
+
+.promo__headline {
+   margin: 0;
+   text-align: center;
+}
+
+.promo__link {
+   font-style: italic;
 }
