@@ -3,6 +3,7 @@
 @import "scss__blocks/normalize.scss";
 @import "scss__blocks/visually-hidden.scss";
 @import "scss__blocks/header.scss";
+@import "scss__blocks/form.scss";
 @import "scss__blocks/promo.scss";
 @import "scss__blocks/direction.scss";
 @import "scss__blocks/explain.scss";
@@ -33,7 +34,6 @@ body {
    font-size: 36px;
    line-height: 36px;
    font-style: italic;
-   font-weight: 400;
 }
 
 .headline {
@@ -65,11 +65,44 @@ body {
    display: block;
    box-sizing: border-box;
    text-align: center;
+   border: none;
    &:hover {
       background-color: #5eaa2f;
    }
    &:active {
-      font-style: italic;
       color: rgba(256, 256, 256, 0.6);
    }
+}
+
+label {
+   font-size: 16px;
+   line-height: 18px;
+   text-transform: uppercase;
+   color: #444444;
+   font-style: italic;
+}
+
+fieldset {
+   margin: 0;
+   padding: 0;
+   border: none;
+}
+
+input,
+textarea {
+   padding: 13px 15px 14px;
+   text-transform: uppercase;
+   color: #444444;
+   font-size: 16px;
+   line-height: 18px;
+}
+
+textarea {
+   padding: 9px 15px 9px;
+}
+
+legend {
+   font-size: 24px;
+   line-height: 26px;
+   padding: 0;
 }

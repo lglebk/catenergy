@@ -1,13 +1,13 @@
 @font-face {
   font-family: "Oswald", Arial, sans-serif;
-  src: local("oswaldmedium"), url("/source/fonts/oswaldmedium.woff2") format("woff2");
+  src: url("/source/fonts/oswaldmedium.woff2") format("woff2"), url("/source/fonts/oswaldmedium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Oswald", Arial, sans-serif;
-  src: local("oswaldregular"), url("/source/fonts/oswaldregular") format("woff2");
+  src: url("/source/fonts/oswaldregular.woff2") format("woff2"), url("/source/fonts/oswaldregular.woff2") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -257,6 +257,76 @@ li {
 }
 .logo__img:active {
   opacity: 0.6;
+}
+
+.form__title {
+  margin-top: 27px;
+  margin-bottom: 37px;
+}
+
+.form__headline {
+  margin-bottom: 39px;
+}
+
+.registr__input {
+  margin-left: 13px;
+  border: 1px solid #e7e7e7;
+  width: 100px;
+  overflow: hidden;
+}
+
+.registr__input {
+  margin-bottom: 13px;
+}
+
+.registr {
+  padding-bottom: 27px;
+}
+
+.goals {
+  padding-top: 22px;
+  padding-bottom: 19px;
+  border-top: solid 1px #d9d9d9;
+  border-bottom: solid 1px #d9d9d9;
+}
+
+.goals__input:not(:last-child) {
+  margin-bottom: 13px;
+}
+
+.fields__owner {
+  margin-top: 26px;
+}
+.fields__owner legend {
+  margin-bottom: 35px;
+}
+
+.owner__input {
+  margin-left: 11px;
+  margin-bottom: 15px;
+}
+.owner__input:last-child {
+  margin-bottom: 23px;
+}
+
+.fields__comments legend {
+  margin-bottom: 38px;
+}
+.fields__comments textarea {
+  font-style: italic;
+  margin-bottom: 23px;
+}
+
+.fields__additional legend {
+  margin-bottom: 34px;
+}
+.fields__additional .additional__label {
+  display: block;
+  margin-bottom: 13px;
+}
+
+.fields__text {
+  text-align: center;
 }
 
 .promo__background {
@@ -582,6 +652,10 @@ li {
   margin-bottom: -2px;
 }
 
+.invite--grey {
+  background-color: #f2f2f2;
+}
+
 .footer {
   background-color: #f2f2f2;
 }
@@ -679,7 +753,6 @@ body {
   font-size: 36px;
   line-height: 36px;
   font-style: italic;
-  font-weight: 400;
 }
 
 .headline {
@@ -711,12 +784,45 @@ body {
   display: block;
   box-sizing: border-box;
   text-align: center;
+  border: none;
 }
 .button:hover {
   background-color: #5eaa2f;
 }
 .button:active {
-  font-style: italic;
   color: rgba(255, 255, 255, 0.6);
+}
+
+label {
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #444444;
+  font-style: italic;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+input,
+textarea {
+  padding: 13px 15px 14px;
+  text-transform: uppercase;
+  color: #444444;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+textarea {
+  padding: 9px 15px 9px;
+}
+
+legend {
+  font-size: 24px;
+  line-height: 26px;
+  padding: 0;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,74 @@
+$grey-bg: #f2f2f2;
+
+.form__title {
+   margin-top: 27px;
+   margin-bottom: 37px;
+}
+
+.form__headline {
+   margin-bottom: 39px;
+}
+
+.registr__input {
+   margin-left: 13px;
+
+   border: 1px solid #e7e7e7;
+   width: 100px;
+   overflow: hidden;
+}
+.registr__input {
+   margin-bottom: 13px;
+}
+.registr {
+   padding-bottom: 27px;
+}
+
+.goals {
+   padding-top: 22px;
+   padding-bottom: 19px;
+   border-top: solid 1px #d9d9d9;
+   border-bottom: solid 1px #d9d9d9;
+}
+
+.goals__input:not(:last-child) {
+   margin-bottom: 13px;
+}
+
+.fields__owner {
+   margin-top: 26px;
+   & legend {
+      margin-bottom: 35px;
+   }
+}
+
+.owner__input {
+   margin-left: 11px;
+   margin-bottom: 15px;
+   &:last-child {
+      margin-bottom: 23px;
+   }
+}
+
+.fields__comments {
+   & legend {
+      margin-bottom: 38px;
+   }
+   & textarea {
+      font-style: italic;
+      margin-bottom: 23px;
+   }
+}
+
+.fields__additional {
+   & legend {
+      margin-bottom: 34px;
+   }
+   & .additional__label {
+      display: block;
+      margin-bottom: 13px;
+   }
+}
+
+.fields__text {
+   text-align: center;
+}
