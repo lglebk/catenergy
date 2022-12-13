@@ -244,6 +244,10 @@ li {
   overflow: hidden;
 }
 
+.logo__link {
+  text-decoration: none;
+}
+
 .logo__img:first-child {
   margin-right: 55px;
 }
@@ -275,9 +279,12 @@ li {
 }
 
 .promo__title {
-  padding: 27px 16px 25px;
+  padding: 27px 35px 25px;
   margin: 0;
   text-align: center;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
 }
 
 .promo__title--white {
@@ -402,6 +409,7 @@ li {
 
 .explain__title {
   margin-top: 20px;
+  line-height: 40px;
   padding-bottom: 40px;
 }
 
@@ -537,13 +545,118 @@ li {
 
 .example__range {
   text-align: center;
-  margin: 0 auto;
+  margin: 15px auto 40px;
 }
 
 .example__range--input {
   width: 85px;
   height: 14px;
   margin: 0 13px;
+}
+
+.location__invite {
+  padding: 26px 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+}
+
+.invite__headline {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #111111;
+  align-self: start;
+}
+
+.invite__text {
+  font-size: 14px;
+  line-height: 20px;
+  font-style: normal;
+  align-self: start;
+}
+
+.location__map iframe {
+  min-width: 320px;
+  min-height: 362px;
+  margin-bottom: -2px;
+}
+
+.footer {
+  background-color: #f2f2f2;
+}
+
+.footer__wrap {
+  padding: 0 20px;
+}
+
+.footer__logo {
+  padding-top: 40px;
+  padding-bottom: 32px;
+  text-align: center;
+}
+.footer__logo:hover {
+  opacity: 0.8;
+}
+.footer__logo:active {
+  opacity: 0.6;
+}
+
+.footer__socials {
+  padding: 20px 77px 21px 73px;
+  text-align: center;
+  text-decoration: none;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-top: #d9d9d9 1px solid;
+  border-bottom: #d9d9d9 1px solid;
+}
+
+.socials__link:not(:last-child) svg,
+.copy__link svg {
+  fill: #666666;
+}
+
+.socials__link:not(:last-child):hover svg,
+.copy__link:hover svg {
+  fill: #68b738;
+  opacity: 0.8;
+}
+
+.socials__link:last-child svg {
+  stroke: #666666;
+}
+
+.socials__link:hover:last-child svg {
+  stroke: #68b738;
+  opacity: 0.8;
+}
+
+.socials__link:active svg,
+.copy__link:active svg {
+  opacity: 0.6;
+}
+
+.footer__copy {
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+
+.copy__link {
+  display: flex;
+  justify-content: space-between;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: #444444;
+  text-decoration: none;
+}
+.copy__link:hover {
+  opacity: 0.6;
 }
 
 body {
@@ -563,14 +676,13 @@ body {
 }
 
 .title {
-  font-weight: 400;
   font-size: 36px;
   line-height: 36px;
   font-style: italic;
+  font-weight: 400;
 }
 
 .headline {
-  line-height: 14px;
   text-transform: uppercase;
   font-style: italic;
 }
@@ -588,7 +700,6 @@ body {
 
 .text {
   font-family: Arial, Helvetica, sans-serif;
-  line-height: 18px;
   color: #444444;
 }
 
