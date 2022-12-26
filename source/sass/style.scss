@@ -4,6 +4,7 @@
 @import "scss__blocks/visually-hidden.scss";
 @import "scss__blocks/header.scss";
 @import "scss__blocks/form.scss";
+@import "scss__blocks/catalog.scss";
 @import "scss__blocks/promo.scss";
 @import "scss__blocks/direction.scss";
 @import "scss__blocks/explain.scss";
@@ -40,6 +41,12 @@ body {
 
    &--white {
       color: #fff;
+      background-color: $basic-green;
+   }
+
+   &--grey {
+      background-color: $grey-bg;
+      color: #444444;
    }
 }
 
