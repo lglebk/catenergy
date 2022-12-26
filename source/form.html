@@ -46,34 +46,38 @@
 
             <form class="form__fields fields" action="https://echo.htmlacademy.ru" method="get">
 
-               <div class="fields__registr registr">
-                  <label class="registr__label">имя:*
-                     <input class="registr__input" type="text" name="cat-name" id="cat-name" value="Барсик" required>
-                  </label>
-                  <br>
-                  <label class="registr__label">вес (кг):*
-                     <input class="registr__input" type="number" name="cat-weight" id="cat-weight" value="7" required>
-                  </label>
-                  <br>
-                  <label class="registr__label">возраст (лет):*
-                     <input class="registr__input" type="number" name="cat-age" id="cat-age" value="7">
-                  </label>
+               <div class="form__registr registr">
+                  <div class="form__stroke">
+                     <label class="form__label" for="cat-name">имя:*</label>
+                     <input class="form__input" type="text" name="cat-name" id="cat-name" value="Барсик" required>
+                  </div>
+
+                  <div class="form__stroke">
+                     <label class="form__label" for="cat-weight">вес&nbsp;(кг):*</label>
+                     <input class="form__input" type="number" name="cat-weight" id="cat-weight" value="7" required>
+                  </div>
+
+                  <div class="form__stroke">
+                     <label class="form__label" for="cat-age">возраст&nbsp;(лет):*</label>
+                     <input class="form__input" type="number" name="cat-age" id="cat-age" value="7">
+                  </div>
+
                </div>
 
                <div class="fields__goals goals">
-                  <label class="goals__label">
+                  <label class="goals__label form__label">
                      <input class="goals__input" type="radio" name="weightloss" id="weightloss" checked>
                      <span class="goals__input--radio visually-hidden"></span>
                      <span class="goals__headline headline">Похудение</span>
                   </label>
                   <br>
-                  <label class="goals__label">
+                  <label class="goals__label form__label">
                      <input class="goals__input" type="radio" name="weightgrow" id="weightgrow">
                      <span class="goals__input--radio visually-hidden"></span>
                      <span class="goals__headline headline">Набор массы</span>
                   </label>
                   <br>
-                  <label class="goals__label">
+                  <label class="goals__label form__label">
                      <input class="goals__input" type="radio" name="nevermind" id="nevermind">
                      <span class="goals__input--radio  visually-hidden"></span>
                      <span class="goals__headline headline">Не знаю (нужен
@@ -84,14 +88,17 @@
                <fieldset class="fields__owner owner">
                   <legend>Контактные данные (владельца кота)</legend>
 
-                  <label class="owner__label">E-MAIL:*
-                     <input class="owner__input" type="email" name="e-mail" id="e-mail" value="kuklachev@gmail.com"
+                  <div class="form__stroke">
+                     <label class="form__label" for="e-mail">E-MAIL:*</label>
+                     <input class="form__input" type="email" name="e-mail" id="e-mail" value="kuklachev@gmail.com"
                         required>
-                  </label>
+                  </div>
 
-                  <label class="owner__label">ТЕЛЕФОН:*
-                     <input class="owner__input" type="tel" name="phone" id="phone" value="8 (960) 900-60-90" required>
-                  </label>
+                  <div class="form__stroke">
+                     <label class="form__label" for="phone">ТЕЛЕФОН:* </label>
+                     <input class="form__input" type="tel" name="phone" id="phone" value="8 (960) 900-60-90" required>
+                  </div>
+
                </fieldset>
 
                <fieldset class="fields__comments comments">
@@ -133,7 +140,9 @@
                <p class="fields__text text">* — Обязательные поля</p>
             </form>
          </section>
+
       </div>
+
       <section class="main__location location">
          <h2 class="location__title visually-hidden">Наш адрес</h2>
 

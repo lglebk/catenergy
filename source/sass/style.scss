@@ -16,7 +16,7 @@ $grey-bg: #f2f2f2;
 
 body {
    background: white;
-   font-family: "Oswald", "Arial", sans-serif;
+   font-family: "Oswald", Arial, sans-serif;
    font-weight: 400;
    font-size: 14px;
    margin: 0 auto;
@@ -25,9 +25,7 @@ body {
 
 .wrap {
    padding: 10px 20px 18px;
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: space-between;
+   overflow: hidden;
 }
 
 .title {
@@ -39,6 +37,7 @@ body {
 .headline {
    text-transform: uppercase;
    font-style: italic;
+
    &--white {
       color: #fff;
    }
@@ -66,9 +65,11 @@ body {
    box-sizing: border-box;
    text-align: center;
    border: none;
+
    &:hover {
       background-color: #5eaa2f;
    }
+
    &:active {
       color: rgba(256, 256, 256, 0.6);
    }

@@ -1,14 +1,14 @@
 @font-face {
   font-family: "Oswald", Arial, sans-serif;
-  src: url("/source/fonts/oswaldmedium.woff2") format("woff2"), url("/source/fonts/oswaldmedium.woff") format("woff");
-  font-weight: 500;
+  src: url("/source/fonts/oswaldregular.woff2") format("woff2"), url("/source/fonts/oswaldregular.woff2") format("woff");
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Oswald", Arial, sans-serif;
-  src: url("/source/fonts/oswaldregular.woff2") format("woff2"), url("/source/fonts/oswaldregular.woff2") format("woff");
-  font-weight: 400;
+  src: url("/source/fonts/oswaldmedium.woff2") format("woff2"), url("/source/fonts/oswaldmedium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
@@ -259,28 +259,37 @@ li {
   opacity: 0.6;
 }
 
+.form {
+  margin: 0;
+  padding: 0;
+}
 .form__title {
   margin-top: 27px;
   margin-bottom: 37px;
 }
-
 .form__headline {
   margin-bottom: 39px;
 }
-
-.registr__input {
-  margin-left: 13px;
-  border: 1px solid #e7e7e7;
-  width: 100px;
-  overflow: hidden;
+.form__registr {
+  padding: 0;
+  margin-bottom: 27px;
 }
-
-.registr__input {
+.form__stroke {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+  align-items: center;
   margin-bottom: 13px;
+  width: 280px;
 }
-
-.registr {
-  padding-bottom: 27px;
+.form__label {
+  width: auto;
+  padding: 0 13px 0 0px;
+  text-align: left;
+}
+.form__input {
+  border: 1px solid #e7e7e7;
+  flex: 1 1 auto;
 }
 
 .goals {
@@ -289,26 +298,23 @@ li {
   border-top: solid 1px #d9d9d9;
   border-bottom: solid 1px #d9d9d9;
 }
-
 .goals__input:not(:last-child) {
   margin-bottom: 13px;
 }
 
 .fields__owner {
   margin-top: 26px;
+  margin-bottom: 24px;
 }
 .fields__owner legend {
+  padding-right: 94px;
   margin-bottom: 35px;
 }
 
-.owner__input {
-  margin-left: 11px;
-  margin-bottom: 15px;
+.fields__comments {
+  display: flex;
+  justify-content: flex-end;
 }
-.owner__input:last-child {
-  margin-bottom: 23px;
-}
-
 .fields__comments legend {
   margin-bottom: 38px;
 }
@@ -317,6 +323,9 @@ li {
   margin-bottom: 23px;
 }
 
+.fields__additional {
+  margin-bottom: 34px;
+}
 .fields__additional legend {
   margin-bottom: 34px;
 }
@@ -735,7 +744,7 @@ li {
 
 body {
   background: white;
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: "Oswald", Arial, sans-serif;
   font-weight: 400;
   font-size: 14px;
   margin: 0 auto;
@@ -744,9 +753,7 @@ body {
 
 .wrap {
   padding: 10px 20px 18px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  overflow: hidden;
 }
 
 .title {

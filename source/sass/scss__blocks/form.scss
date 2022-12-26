@@ -1,26 +1,42 @@
 $grey-bg: #f2f2f2;
 
-.form__title {
-   margin-top: 27px;
-   margin-bottom: 37px;
-}
+.form {
+   margin: 0;
+   padding: 0;
 
-.form__headline {
-   margin-bottom: 39px;
-}
+   &__title {
+      margin-top: 27px;
+      margin-bottom: 37px;
+   }
 
-.registr__input {
-   margin-left: 13px;
+   &__headline {
+      margin-bottom: 39px;
+   }
 
-   border: 1px solid #e7e7e7;
-   width: 100px;
-   overflow: hidden;
-}
-.registr__input {
-   margin-bottom: 13px;
-}
-.registr {
-   padding-bottom: 27px;
+   &__registr {
+      padding: 0;
+      margin-bottom: 27px;
+   }
+
+   &__stroke {
+      display: flex;
+      justify-content: flex-end;
+      padding: 0;
+      align-items: center;
+      margin-bottom: 13px;
+      width: 280px;
+   }
+
+   &__label {
+      width: auto;
+      padding: 0 13px 0 0px;
+      text-align: left;
+   }
+
+   &__input {
+      border: 1px solid #e7e7e7;
+      flex: 1 1 auto;
+   }
 }
 
 .goals {
@@ -28,31 +44,30 @@ $grey-bg: #f2f2f2;
    padding-bottom: 19px;
    border-top: solid 1px #d9d9d9;
    border-bottom: solid 1px #d9d9d9;
-}
 
-.goals__input:not(:last-child) {
-   margin-bottom: 13px;
+   &__input:not(:last-child) {
+      margin-bottom: 13px;
+   }
 }
 
 .fields__owner {
    margin-top: 26px;
+   margin-bottom: 24px;
+
    & legend {
+      padding-right: 94px;
       margin-bottom: 35px;
    }
 }
 
-.owner__input {
-   margin-left: 11px;
-   margin-bottom: 15px;
-   &:last-child {
-      margin-bottom: 23px;
-   }
-}
-
 .fields__comments {
+   display: flex;
+   justify-content: flex-end;
+
    & legend {
       margin-bottom: 38px;
    }
+
    & textarea {
       font-style: italic;
       margin-bottom: 23px;
@@ -60,9 +75,12 @@ $grey-bg: #f2f2f2;
 }
 
 .fields__additional {
+   margin-bottom: 34px;
+
    & legend {
       margin-bottom: 34px;
    }
+
    & .additional__label {
       display: block;
       margin-bottom: 13px;
