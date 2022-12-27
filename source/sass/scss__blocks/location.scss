@@ -1,31 +1,31 @@
 .location__invite {
-   padding: 26px 20px;
-   display: grid;
-   grid-template-columns: 1fr 1fr;
-   gap: 2px;
+  padding: 26px 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
 }
 
 .invite__headline {
-   font-size: 16px;
-   line-height: 20px;
-   text-transform: uppercase;
-   color: #111111;
-   align-self: start;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #111111;
+  align-self: start;
 }
 
 .invite__text {
-   font-size: 14px;
-   line-height: 20px;
-   font-style: normal;
-   align-self: start;
+  font-size: 14px;
+  line-height: 20px;
+  font-style: normal;
+  align-self: start;
 }
 
 .location__map iframe {
-   min-width: 320px;
-   min-height: 362px;
-   margin-bottom: -2px;
+  min-width: 320px;
+  min-height: 362px;
+  margin-bottom: -2px;
 }
 
 .invite--grey {
-   background-color: $grey-bg;
+  background-color: $grey-bg;
 }

@@ -2,6 +2,7 @@
 @import "scss__blocks/font.scss";
 @import "scss__blocks/normalize.scss";
 @import "scss__blocks/visually-hidden.scss";
+@import "scss__blocks/components.scss";
 @import "scss__blocks/header.scss";
 @import "scss__blocks/form.scss";
 @import "scss__blocks/catalog.scss";
@@ -16,101 +17,15 @@ $basic-green: #68b738;
 $grey-bg: #f2f2f2;
 
 body {
-   background: white;
-   font-family: "Oswald", Arial, sans-serif;
-   font-weight: 400;
-   font-size: 14px;
-   margin: 0 auto;
-   width: 320px;
+  background: white;
+  font-family: "Oswald", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  margin: 0 auto;
+  width: 320px;
 }
 
 .wrap {
-   padding: 10px 20px 18px;
-   overflow: hidden;
-}
-
-.title {
-   font-size: 36px;
-   line-height: 36px;
-   font-style: italic;
-}
-
-.headline {
-   text-transform: uppercase;
-   font-style: italic;
-
-   &--white {
-      color: #fff;
-      background-color: $basic-green;
-   }
-
-   &--grey {
-      background-color: $grey-bg;
-      color: #444444;
-   }
-}
-
-.subject {
-   font-size: 24px;
-   line-height: 37px;
-   text-transform: uppercase;
-   color: #000000;
-   font-style: italic;
-}
-
-.text {
-   font-family: Arial, Helvetica, sans-serif;
-   color: #444444;
-}
-
-.button {
-   text-decoration: none;
-   width: 100%;
-   padding: 7px 44px;
-   background-color: $basic-green;
-   display: block;
-   box-sizing: border-box;
-   text-align: center;
-   border: none;
-
-   &:hover {
-      background-color: #5eaa2f;
-   }
-
-   &:active {
-      color: rgba(256, 256, 256, 0.6);
-   }
-}
-
-label {
-   font-size: 16px;
-   line-height: 18px;
-   text-transform: uppercase;
-   color: #444444;
-   font-style: italic;
-}
-
-fieldset {
-   margin: 0;
-   padding: 0;
-   border: none;
-}
-
-input,
-textarea {
-   padding: 13px 15px 14px;
-   text-transform: uppercase;
-   color: #444444;
-   font-size: 16px;
-   line-height: 18px;
-}
-
-textarea {
-   padding: 9px 15px 9px;
-}
-
-legend {
-   font-size: 24px;
-   line-height: 26px;
-   padding: 0;
+  padding: 10px 20px 18px;
+  overflow: hidden;
 }
