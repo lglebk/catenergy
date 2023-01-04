@@ -4,32 +4,33 @@
 @import "scss__blocks/visually-hidden.scss";
 @import "scss__blocks/components.scss";
 @import "scss__blocks/header.scss";
-@import "scss__blocks/form.scss";
-@import "scss__blocks/catalog.scss";
-@import "scss__blocks/promo.scss";
-@import "scss__blocks/direction.scss";
-@import "scss__blocks/explain.scss";
-@import "scss__blocks/example.scss";
-@import "scss__blocks/location.scss";
-@import "scss__blocks/footer.scss";
+// @import "scss__blocks/form.scss";
+// @import "scss__blocks/catalog.scss";
+// @import "scss__blocks/promo.scss";
+// @import "scss__blocks/direction.scss";
+// @import "scss__blocks/explain.scss";
+// @import "scss__blocks/example.scss";
+// @import "scss__blocks/location.scss";
+// @import "scss__blocks/footer.scss";
 
 $basic-green: #68b738;
 $grey-bg: #f2f2f2;
+
 $mobile-width: 320px;
 $tablet-width: 768px;
 $desktop-width: 1440px;
 
 body {
-  background: white;
-  font-family: "Oswald", Arial, sans-serif;
+  background: #ffffff;
+  font-family: "Oswald-regular", Arial, sans-serif;
   font-weight: 400;
   font-size: 14px;
-  margin: 0 auto;
-  max-width: 1440px;
   min-height: 100%;
 }
 
 .wrap {
+  margin: 0 auto;
+  max-width: $desktop-width;
   padding: 10px 20px 18px;
   overflow: hidden;
 }

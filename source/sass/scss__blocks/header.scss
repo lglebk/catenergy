@@ -5,6 +5,7 @@ $desktop-width: 1440px;
 .header {
   max-width: 1440px;
   margin: 0 auto;
+  height: 66px;
 
   &__wrap {
     @media (min-width: $tablet-width) {
@@ -15,12 +16,17 @@ $desktop-width: 1440px;
   }
 }
 
-.logo {
-  &__link {
-    text-decoration: none;
+.header__logo {
+  display: flex;
+  align-items: center;
+
+  & .logo__link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
-  &__img {
+  & .logo__img {
     &:hover {
       opacity: 0.8;
     }
@@ -36,36 +42,84 @@ $desktop-width: 1440px;
 }
 
 .nav__toogle {
+  margin-left: auto;
+  position: relative;
+  width: 24px;
+  background-color: #fff;
+  border: none;
+
+  &--opened::before {
+    position: absolute;
+    content: "";
+    width: 24px;
+    height: 1.5px;
+    background-color: #000000;
+    top: 50%;
+    left: 0;
+    transform: rotate(45deg);
+  }
+
+  &--opened::after {
+    position: absolute;
+    content: "";
+    width: 24px;
+    height: 1.5px;
+    background-color: #000000;
+    top: 50%;
+    left: 0;
+    transform: rotate(-45deg);
+  }
+
   @media (min-width: $tablet-width) {
     display: none;
   }
 }
 
 .nav__list {
+  // display: none;
+  position: absolute;
+  content: "";
+  top: 66px;
+  left: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 66px 66px 66px;
   list-style: none;
-  display: none;
+  background-color: #fff;
 
   & .nav__item {
-    padding-left: 34px;
+    display: grid;
+    text-align: center;
+    height: 66px;
+    border-bottom: 1px solid #e6e6e6;
+    border-top: 1px solid #e6e6e6;
+    align-items: center;
   }
 
-  & a {
+  & .nav__link {
+    // padding-top: 22px;
+    // padding-bottom: 24px;
+    align-items: center;
     color: #000000;
-    text-decoration: none;
-    padding-bottom: 10px;
+    font-family: "Oswald-medium", sans-serif;
+    font-weight: 500;
+    font-style: normal;
   }
 
   & .nav__link--current {
     position: relative;
 
     &::after {
-      position: absolute;
-      content: "";
-      height: 2px;
-      width: 100%;
-      background-color: #68b738;
-      bottom: 0;
-      left: 0;
+      @media (min-width: $tablet-width) {
+        position: absolute;
+        content: "";
+        height: 2px;
+        width: 100%;
+        background-color: #68b738;
+        bottom: 10px;
+        left: 0;
+      }
     }
   }
 
