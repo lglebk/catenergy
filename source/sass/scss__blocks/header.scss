@@ -41,33 +41,74 @@ $desktop-width: 1440px;
   }
 }
 
-.nav__toogle {
+.nav__toggle {
   margin-left: auto;
   position: relative;
   width: 24px;
+  height: 18px;
   background-color: #fff;
   border: none;
+  cursor: pointer;
 
-  &--opened::before {
-    position: absolute;
-    content: "";
-    width: 24px;
-    height: 1.5px;
-    background-color: #000000;
-    top: 50%;
-    left: 0;
-    transform: rotate(45deg);
+  &:hover {
+    opacity: 0.6;
   }
 
-  &--opened::after {
-    position: absolute;
-    content: "";
-    width: 24px;
-    height: 1.5px;
-    background-color: #000000;
-    top: 50%;
-    left: 0;
-    transform: rotate(-45deg);
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--opened {
+    &::before {
+      position: absolute;
+      content: "";
+      width: 24px;
+      height: 1.5px;
+      background-color: #000000;
+      top: 50%;
+      left: 0;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 24px;
+      height: 1.5px;
+      background-color: #000000;
+      top: 50%;
+      left: 0;
+      transform: rotate(-45deg);
+    }
+
+    & .nav__list {
+      z-index: 2;
+    }
+  }
+
+  &--closed {
+    &::before {
+      position: absolute;
+      content: "";
+      width: 24px;
+      height: 1.5px;
+      background-color: #000000;
+      top: 50%;
+      left: 0;
+      box-shadow: 0 8px 0 0 #000, 0 -8px 0 0 #000;
+    }
+
+    & .nav__list {
+      display: none;
+    }
+  }
+
+  &--nojs {
+    display: none;
+
+    & .nav__list {
+      display: block;
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -102,14 +143,28 @@ $desktop-width: 1440px;
     // padding-bottom: 24px;
     align-items: center;
     color: #000000;
-    font-family: "Oswald-medium", sans-serif;
+    font-family: "Oswald";
     font-weight: 500;
     font-style: normal;
+    position: relative;
+
+    &:hover {
+      opacity: 60%;
+    }
+
+    &:active {
+      border-bottom: #68b738 1px solid;
+      // position: absolute;
+      // content: "";
+      // height: 2px;
+      // width: 100%;
+      // background-color: #68b738;
+      // bottom: 8px;
+      // left: 0;
+    }
   }
 
   & .nav__link--current {
-    position: relative;
-
     &::after {
       @media (min-width: $tablet-width) {
         position: absolute;

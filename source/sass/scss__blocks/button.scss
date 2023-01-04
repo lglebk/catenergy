@@ -1,0 +1,22 @@
+$basic-green: #68b738;
+$grey-bg: #f2f2f2;
+
+.button {
+  text-decoration: none;
+  width: 100%;
+  padding: 7px 44px;
+  background-color: $basic-green;
+  display: block;
+  box-sizing: border-box;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(256, 256, 256, 0.6);
+  }
+}

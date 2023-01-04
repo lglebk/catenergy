@@ -1,16 +1,16 @@
 @font-face {
-  font-family: "Oswald-regular", Arial, sans-serif;
-  src: url("/source/fonts/oswaldregular.woff2") format("woff2"), url("/source/fonts/oswaldregular.woff2") format("woff");
+  font-family: "Oswald";
   font-weight: 400;
   font-style: normal;
   font-display: swap;
+  src: url("/source/fonts/oswaldregular.woff2") format("woff2"), url("/source/fonts/oswaldregular.woff2") format("woff");
 }
 @font-face {
-  font-family: "Oswald-medium", Arial, sans-serif;
-  src: url("/source/fonts/oswaldmedium.woff2") format("woff2"), url("/source/fonts/oswaldmedium.woff") format("woff");
+  font-family: "Oswald";
   font-weight: 500;
   font-style: normal;
   font-display: swap;
+  src: url("/source/fonts/oswaldmedium.woff2") format("woff2"), url("/source/fonts/oswaldmedium.woff") format("woff");
 }
 html {
   line-height: 1.15;
@@ -257,6 +257,24 @@ a:visited {
   overflow: hidden;
 }
 
+.button {
+  text-decoration: none;
+  width: 100%;
+  padding: 7px 44px;
+  background-color: #68b738;
+  display: block;
+  box-sizing: border-box;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: #5eaa2f;
+}
+.button:active {
+  color: rgba(255, 255, 255, 0.6);
+}
+
 .title {
   font-size: 36px;
   line-height: 36px;
@@ -272,30 +290,12 @@ a:visited {
 }
 
 .text {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Arial", Helvetica, sans-serif;
   color: #444444;
-}
-
-.button {
-  text-decoration: none;
-  width: 100%;
-  padding: 7px 44px;
-  background-color: #68b738;
-  display: block;
-  box-sizing: border-box;
-  text-align: center;
-  border: none;
-}
-.button:hover {
-  background-color: #5eaa2f;
-}
-.button:active {
-  color: rgba(255, 255, 255, 0.6);
 }
 
 .headline {
   text-transform: uppercase;
-  font-style: italic;
   border: none;
   line-height: 20px;
 }
@@ -339,14 +339,22 @@ a:visited {
   margin-right: 55px;
 }
 
-.nav__toogle {
+.nav__toggle {
   margin-left: auto;
   position: relative;
   width: 24px;
+  height: 18px;
   background-color: #fff;
   border: none;
+  cursor: pointer;
 }
-.nav__toogle--opened::before {
+.nav__toggle:hover {
+  opacity: 0.6;
+}
+.nav__toggle:active {
+  opacity: 0.3;
+}
+.nav__toggle--opened::before {
   position: absolute;
   content: "";
   width: 24px;
@@ -356,7 +364,7 @@ a:visited {
   left: 0;
   transform: rotate(45deg);
 }
-.nav__toogle--opened::after {
+.nav__toggle--opened::after {
   position: absolute;
   content: "";
   width: 24px;
@@ -366,8 +374,30 @@ a:visited {
   left: 0;
   transform: rotate(-45deg);
 }
+.nav__toggle--opened .nav__list {
+  z-index: 2;
+}
+.nav__toggle--closed::before {
+  position: absolute;
+  content: "";
+  width: 24px;
+  height: 1.5px;
+  background-color: #000000;
+  top: 50%;
+  left: 0;
+  box-shadow: 0 8px 0 0 #000, 0 -8px 0 0 #000;
+}
+.nav__toggle--closed .nav__list {
+  display: none;
+}
+.nav__toggle--nojs {
+  display: none;
+}
+.nav__toggle--nojs .nav__list {
+  display: block;
+}
 @media (min-width: 768px) {
-  .nav__toogle {
+  .nav__toggle {
     display: none;
   }
 }
@@ -395,12 +425,16 @@ a:visited {
 .nav__list .nav__link {
   align-items: center;
   color: #000000;
-  font-family: "Oswald-medium", sans-serif;
+  font-family: "Oswald";
   font-weight: 500;
   font-style: normal;
-}
-.nav__list .nav__link--current {
   position: relative;
+}
+.nav__list .nav__link:hover {
+  opacity: 60%;
+}
+.nav__list .nav__link:active {
+  border-bottom: #68b738 1px solid;
 }
 @media (min-width: 768px) {
   .nav__list .nav__link--current::after {
@@ -422,7 +456,7 @@ a:visited {
 
 body {
   background: #ffffff;
-  font-family: "Oswald-regular", Arial, sans-serif;
+  font-family: "Oswald";
   font-weight: 400;
   font-size: 14px;
   min-height: 100%;
@@ -430,8 +464,18 @@ body {
 
 .wrap {
   margin: 0 auto;
-  max-width: 1440px;
   padding: 10px 20px 18px;
   overflow: hidden;
+  max-width: 320px;
+}
+@media (min-width: 768px) {
+  .wrap {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1440px) {
+  .wrap {
+    max-width: 1440px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

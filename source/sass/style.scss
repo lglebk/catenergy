@@ -2,10 +2,12 @@
 @import "scss__blocks/font.scss";
 @import "scss__blocks/normalize.scss";
 @import "scss__blocks/visually-hidden.scss";
+@import "scss__blocks/button.scss";
 @import "scss__blocks/components.scss";
 @import "scss__blocks/header.scss";
 // @import "scss__blocks/form.scss";
 // @import "scss__blocks/catalog.scss";
+// @import "scss__blocks/card.scss";
 // @import "scss__blocks/promo.scss";
 // @import "scss__blocks/direction.scss";
 // @import "scss__blocks/explain.scss";
@@ -22,7 +24,7 @@ $desktop-width: 1440px;
 
 body {
   background: #ffffff;
-  font-family: "Oswald-regular", Arial, sans-serif;
+  font-family: "Oswald";
   font-weight: 400;
   font-size: 14px;
   min-height: 100%;
@@ -30,7 +32,15 @@ body {
 
 .wrap {
   margin: 0 auto;
-  max-width: $desktop-width;
   padding: 10px 20px 18px;
   overflow: hidden;
+  max-width: $mobile-width;
+
+  @media (min-width: $tablet-width) {
+    max-width: $tablet-width;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: $desktop-width;
+  }
 }
