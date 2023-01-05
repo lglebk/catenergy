@@ -1,6 +1,6 @@
 $mobile-width: 320px;
 $tablet-width: 768px;
-$desktop-width: 1440px;
+$desktop-width: 1300px;
 
 .header {
   max-width: 1440px;
@@ -19,25 +19,30 @@ $desktop-width: 1440px;
 .header__logo {
   display: flex;
   align-items: center;
+}
 
-  & .logo__link {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.logo__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo__img,
+.logo__sign {
+  &:hover {
+    opacity: 0.8;
   }
 
-  & .logo__img {
-    &:hover {
-      opacity: 0.8;
-    }
+  &:active {
+    opacity: 0.6;
+  }
+}
 
-    &:active {
-      opacity: 0.6;
-    }
+.logo__sign {
+  margin-left: 57px;
 
-    &:first-child {
-      margin-right: 55px;
-    }
+  @media (min-width: $tablet-width) {
+    margin-left: 13px;
   }
 }
 
@@ -57,61 +62,49 @@ $desktop-width: 1440px;
   &:active {
     opacity: 0.3;
   }
+}
 
-  &--opened {
-    &::before {
-      position: absolute;
-      content: "";
-      width: 24px;
-      height: 1.5px;
-      background-color: #000000;
-      top: 50%;
-      left: 0;
-      transform: rotate(45deg);
-    }
-
-    &::after {
-      position: absolute;
-      content: "";
-      width: 24px;
-      height: 1.5px;
-      background-color: #000000;
-      top: 50%;
-      left: 0;
-      transform: rotate(-45deg);
-    }
-
-    & .nav__list {
-      z-index: 2;
-    }
+.header__nav--opened .nav__toggle {
+  &::before {
+    position: absolute;
+    content: "";
+    width: 24px;
+    height: 1.5px;
+    background-color: #000000;
+    top: 50%;
+    left: 0;
+    transform: rotate(45deg);
   }
 
-  &--closed {
-    &::before {
-      position: absolute;
-      content: "";
-      width: 24px;
-      height: 1.5px;
-      background-color: #000000;
-      top: 50%;
-      left: 0;
-      box-shadow: 0 8px 0 0 #000, 0 -8px 0 0 #000;
-    }
-
-    & .nav__list {
-      display: none;
-    }
+  &::after {
+    position: absolute;
+    content: "";
+    width: 24px;
+    height: 1.5px;
+    background-color: #000000;
+    top: 50%;
+    left: 0;
+    transform: rotate(-45deg);
   }
 
-  &--nojs {
-    display: none;
+  & .nav__list {
+    z-index: 2;
+  }
+}
 
-    & .nav__list {
-      display: block;
-    }
+.header__nav--closed {
+  .nav__toggle::before {
+    position: absolute;
+    content: "";
+    width: 24px;
+    height: 1.5px;
+    background-color: #000000;
+    top: 50%;
+    left: 0;
+    box-shadow: 0 8px 0 0 #000, 0 -8px 0 0 #000;
   }
 
-  @media (min-width: $tablet-width) {
+  & .nav__list {
     display: none;
   }
 }
