@@ -310,99 +310,14 @@ a:visited {
 }
 
 .header {
-  max-width: 1440px;
-  margin: 0 auto;
   height: 66px;
 }
-@media (min-width: 768px) {
-  .header__wrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-  }
-}
 
-.header__logo {
+.nav__logo {
   display: flex;
   align-items: center;
-}
-
-.logo__link {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo__img:hover,
-.logo__sign:hover {
-  opacity: 0.8;
-}
-.logo__img:active,
-.logo__sign:active {
-  opacity: 0.6;
-}
-
-.logo__sign {
-  margin-left: 57px;
-}
-@media (min-width: 768px) {
-  .logo__sign {
-    margin-left: 13px;
-  }
-}
-
-.nav__toggle {
-  margin-left: auto;
-  position: relative;
-  width: 24px;
-  height: 18px;
-  background-color: #fff;
-  border: none;
-  cursor: pointer;
-}
-.nav__toggle:hover {
-  opacity: 0.6;
-}
-.nav__toggle:active {
-  opacity: 0.3;
-}
-
-.header__nav--opened .nav__toggle::before {
-  position: absolute;
-  content: "";
-  width: 24px;
-  height: 1.5px;
-  background-color: #000000;
-  top: 50%;
-  left: 0;
-  transform: rotate(45deg);
-}
-.header__nav--opened .nav__toggle::after {
-  position: absolute;
-  content: "";
-  width: 24px;
-  height: 1.5px;
-  background-color: #000000;
-  top: 50%;
-  left: 0;
-  transform: rotate(-45deg);
-}
-.header__nav--opened .nav__toggle .nav__list {
-  z-index: 2;
-}
-
-.header__nav--closed .nav__toggle::before {
-  position: absolute;
-  content: "";
-  width: 24px;
-  height: 1.5px;
-  background-color: #000000;
-  top: 50%;
-  left: 0;
-  box-shadow: 0 8px 0 0 #000, 0 -8px 0 0 #000;
-}
-.header__nav--closed .nav__list {
-  display: none;
+  margin-right: auto;
+  height: 66px;
 }
 
 .nav__list {
@@ -439,6 +354,9 @@ a:visited {
 .nav__list .nav__link:active {
   border-bottom: #68b738 1px solid;
 }
+.nav__list .nav__link--current {
+  position: relative;
+}
 @media (min-width: 768px) {
   .nav__list .nav__link--current::after {
     position: absolute;
@@ -446,14 +364,121 @@ a:visited {
     height: 2px;
     width: 100%;
     background-color: #68b738;
-    bottom: 10px;
+    bottom: -10px;
     left: 0;
   }
 }
+
+.nav__toggle {
+  margin-left: auto;
+  position: relative;
+  width: 24px;
+  height: 18px;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.nav__toggle:hover {
+  opacity: 0.6;
+}
+.nav__toggle:active {
+  opacity: 0.3;
+}
 @media (min-width: 768px) {
-  .nav__list {
+  .nav__toggle {
+    display: none;
+  }
+}
+
+.header__nav--opened .nav__toggle::before {
+  position: absolute;
+  content: "";
+  width: 24px;
+  height: 1.5px;
+  background-color: #000000;
+  top: 50%;
+  left: 0;
+  transform: rotate(45deg);
+}
+.header__nav--opened .nav__toggle::after {
+  position: absolute;
+  content: "";
+  width: 24px;
+  height: 1.5px;
+  background-color: #000000;
+  top: 50%;
+  left: 0;
+  transform: rotate(-45deg);
+}
+.header__nav--opened .nav__toggle .nav__list {
+  z-index: 2;
+}
+
+@media (min-width: 768px) {
+  .header__nav--closed {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+  }
+}
+.header__nav--closed .nav__toggle::before {
+  position: absolute;
+  content: "";
+  width: 24px;
+  height: 1.5px;
+  background-color: #000000;
+  top: 50%;
+  left: 0;
+  box-shadow: 0 8px 0 0 #000, 0 -8px 0 0 #000;
+}
+.header__nav--closed .nav__list {
+  display: none;
+}
+@media (min-width: 768px) {
+  .header__nav--closed .nav__list {
+    position: static;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: right;
+  }
+}
+@media (min-width: 768px) {
+  .header__nav--closed .nav__item {
+    border: none;
+  }
+  .header__nav--closed .nav__item:not(:last-child) {
+    margin-right: 34px;
+  }
+}
+@media (min-width: 768px) {
+  .header__nav--closed .nav__link {
+    font-size: 18px;
+    font-weight: 400;
+  }
+}
+
+.logo__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo__img:hover,
+.logo__sign:hover {
+  opacity: 0.8;
+}
+.logo__img:active,
+.logo__sign:active {
+  opacity: 0.6;
+}
+
+.logo__sign {
+  margin-left: 57px;
+}
+@media (min-width: 768px) {
+  .logo__sign {
+    margin-left: 13px;
+    margin-right: 94px;
   }
 }
 

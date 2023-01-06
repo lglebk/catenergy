@@ -1,0 +1,29 @@
+$mobile-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1300px;
+
+.logo__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo__img,
+.logo__sign {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.logo__sign {
+  margin-left: 57px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 13px;
+    margin-right: 94px;
+  }
+}
