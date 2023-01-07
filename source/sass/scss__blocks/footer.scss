@@ -11,15 +11,15 @@ $desktop-width: 1300px;
 
 .footer__wrap {
   display: grid;
-  width: auto;
   margin: 0 auto;
   padding: 0 20px;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto;
   align-items: center;
+  max-width: $mobile-width;
 
   @media (min-width: 650px) {
-    width: auto;
+    max-width: $tablet-width;
     padding: 58px 30px;
     grid-template-columns: auto 1fr auto;
     grid-template-rows: 1fr;
@@ -45,7 +45,9 @@ $desktop-width: 1300px;
 
   &:hover {
     opacity: 0.8;
+    transition: all 0.3s;
   }
+
   &:active {
     opacity: 0.6;
   }
@@ -78,6 +80,7 @@ $desktop-width: 1300px;
 .copy__link:hover svg {
   fill: #68b738;
   opacity: 0.8;
+  transition: all 0.3s;
 }
 
 .socials__link:last-child svg {
@@ -86,6 +89,7 @@ $desktop-width: 1300px;
 .socials__link:hover:last-child svg {
   stroke: #68b738;
   opacity: 0.8;
+  transition: all 0.3s;
 }
 
 .socials__link:active svg,
@@ -109,6 +113,7 @@ $desktop-width: 1300px;
   line-height: 18px;
   color: #444444;
   text-decoration: none;
+  max-width: $mobile-width;
 
   span {
     margin-right: 22px;
@@ -120,5 +125,6 @@ $desktop-width: 1300px;
 
   &:hover {
     opacity: 0.6;
+    transition: all 0.3s;
   }
 }

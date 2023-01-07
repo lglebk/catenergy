@@ -1,10 +1,43 @@
 $basic-green: #68b738;
 $grey-bg: #f2f2f2;
 
+$mobile-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1300px;
+
 .title {
+  font-family: "Oswald";
+  font-style: normal;
+  line-height: 100%;
   font-size: 36px;
-  line-height: 36px;
-  font-style: italic;
+  font-weight: 400;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+  }
+}
+
+.headline {
+  font-family: "Oswald";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%;
+  font-style: normal;
+  text-transform: uppercase;
+  border: none;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+  }
+
+  &--white {
+    color: #fff;
+  }
+
+  &--grey {
+    background-color: $grey-bg;
+    color: #444444;
+  }
 }
 
 .subject {
@@ -18,19 +51,4 @@ $grey-bg: #f2f2f2;
 .text {
   font-family: "Arial", Helvetica, sans-serif;
   color: #444444;
-}
-
-.headline {
-  text-transform: uppercase;
-  border: none;
-  line-height: 20px;
-
-  &--white {
-    color: #fff;
-  }
-
-  &--grey {
-    background-color: $grey-bg;
-    color: #444444;
-  }
 }

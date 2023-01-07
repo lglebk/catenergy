@@ -7,10 +7,10 @@
 @import "scss__blocks/header.scss";
 @import "scss__blocks/logo.scss";
 @import "scss__blocks/footer.scss";
+@import "scss__blocks/promo.scss";
 // @import "scss__blocks/form.scss";
 // @import "scss__blocks/catalog.scss";
 // @import "scss__blocks/card.scss";
-// @import "scss__blocks/promo.scss";
 // @import "scss__blocks/direction.scss";
 // @import "scss__blocks/explain.scss";
 // @import "scss__blocks/example.scss";
@@ -33,15 +33,19 @@ body {
 
 .wrap {
   margin: 0 auto;
-  padding: 10px 20px 18px;
+  padding: 0px 20px;
   overflow: hidden;
   max-width: $mobile-width;
 
   @media (min-width: $tablet-width) {
     max-width: $tablet-width;
+    padding: 0px 30px;
+    width: auto;
   }
 
   @media (min-width: $desktop-width) {
     max-width: $desktop-width;
+    padding: 0 110px;
+    width: auto;
   }
 }

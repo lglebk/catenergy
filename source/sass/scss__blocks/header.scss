@@ -4,6 +4,17 @@ $desktop-width: 1300px;
 
 .header {
   height: 66px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 53px;
+  }
+}
+
+.header__wrap {
 }
 
 .header__nav {
@@ -44,9 +55,15 @@ $desktop-width: 1300px;
     font-weight: 500;
     font-style: normal;
     position: relative;
+    z-index: 2;
+
+    @media (min-width: $desktop-width) {
+      color: #fff;
+    }
 
     &:hover {
       opacity: 60%;
+      transition: all 0.3s;
     }
 
     &:active {
@@ -92,6 +109,7 @@ $desktop-width: 1300px;
 
   &:hover {
     opacity: 0.6;
+    transition: all 0.3s;
   }
 
   &:active {
