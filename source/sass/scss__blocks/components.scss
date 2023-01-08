@@ -41,11 +41,13 @@ $desktop-width: 1300px;
 }
 
 .subject {
+  font-family: "Oswald";
+  font-style: normal;
   font-size: 24px;
-  line-height: 37px;
+  line-height: 154%;
+  font-weight: 400;
   text-transform: uppercase;
   color: #000000;
-  font-style: italic;
 }
 
 .text {

@@ -12,8 +12,8 @@ $desktop-width: 1300px;
 .promo__background {
   position: relative;
   width: 100%;
-  height: 302px;
-  margin-bottom: 138px;
+  height: auto;
+  margin-bottom: 20px;
   background-repeat: no-repeat;
   text-align: center;
 
@@ -25,7 +25,7 @@ $desktop-width: 1300px;
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
-    height: 100%;
+    height: 302px;
     top: 0;
     right: 0;
 
