@@ -21,13 +21,14 @@ $desktop-width: 1300px;
   font-family: "Oswald";
   font-size: 14px;
   font-weight: 400;
-  line-height: 100%;
+  line-height: 129%;
   font-style: normal;
   text-transform: uppercase;
   border: none;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
+    line-height: 100%;
   }
 
   &--white {

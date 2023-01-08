@@ -294,7 +294,7 @@ a:visited {
   font-family: "Oswald";
   font-size: 14px;
   font-weight: 400;
-  line-height: 100%;
+  line-height: 129%;
   font-style: normal;
   text-transform: uppercase;
   border: none;
@@ -302,6 +302,7 @@ a:visited {
 @media (min-width: 768px) {
   .headline {
     font-size: 20px;
+    line-height: 100%;
   }
 }
 .headline--white {
