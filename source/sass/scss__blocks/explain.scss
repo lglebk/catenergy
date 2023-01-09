@@ -6,10 +6,10 @@ $tablet-width: 768px;
 $desktop-width: 1300px;
 
 .explain__title {
-  padding-top: 20px;
   padding-bottom: 40px;
 
   @media (min-width: $tablet-width) {
+    padding-top: 0;
     padding-bottom: 32px;
   }
 }
@@ -29,6 +29,11 @@ $desktop-width: 1300px;
     row-gap: 37px;
     column-gap: 153px;
     counter-reset: item;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 230px auto 246px auto 248px auto 250px;
+    gap: unset;
   }
 }
 
@@ -59,6 +64,24 @@ $desktop-width: 1300px;
       z-index: -1;
       font-family: "Oswald";
       font-weight: 400;
+    }
+
+    @media (min-width: $desktop-width) {
+      &:first-child {
+        grid-column: 1/2;
+      }
+
+      &:nth-child(2) {
+        grid-column: 3/4;
+      }
+
+      &:nth-child(3) {
+        grid-column: 5/6;
+      }
+
+      &:last-child {
+        grid-column: 7/-1;
+      }
     }
   }
 
@@ -96,27 +119,18 @@ $desktop-width: 1300px;
     background-image: url(/img/icon/boil.svg);
     left: calc(50% - 15px);
     top: calc(50% - 15px);
-
-    @media (min-width: $tablet-width) {
-    }
   }
 
   &:nth-child(3) .explain__img:after {
     background-image: url(/img/icon/meal.svg);
     left: calc(50% - 13px);
     top: calc(50% - 15px);
-
-    @media (min-width: $tablet-width) {
-    }
   }
 
   &:last-child .explain__img:after {
     background-image: url(/img/icon/alarm.svg);
     left: calc(50% - 16.5px);
     top: calc(50% - 16.5px);
-
-    @media (min-width: $tablet-width) {
-    }
   }
 }
 

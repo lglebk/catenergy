@@ -1091,11 +1091,11 @@ a:visited {
 }
 
 .explain__title {
-  padding-top: 20px;
   padding-bottom: 40px;
 }
 @media (min-width: 768px) {
   .explain__title {
+    padding-top: 0;
     padding-bottom: 32px;
   }
 }
@@ -1115,6 +1115,12 @@ a:visited {
     row-gap: 37px;
     column-gap: 153px;
     counter-reset: item;
+  }
+}
+@media (min-width: 1300px) {
+  .explain__list {
+    grid-template-columns: 230px auto 246px auto 248px auto 250px;
+    gap: unset;
   }
 }
 
@@ -1145,6 +1151,20 @@ a:visited {
     z-index: -1;
     font-family: "Oswald";
     font-weight: 400;
+  }
+}
+@media (min-width: 768px) and (min-width: 1300px) {
+  .explain__item:first-child {
+    grid-column: 1/2;
+  }
+  .explain__item:nth-child(2) {
+    grid-column: 3/4;
+  }
+  .explain__item:nth-child(3) {
+    grid-column: 5/6;
+  }
+  .explain__item:last-child {
+    grid-column: 7/-1;
   }
 }
 .explain__item .explain__img {
@@ -1190,6 +1210,7 @@ a:visited {
   left: calc(50% - 16.5px);
   top: calc(50% - 16.5px);
 }
+
 .explain__text {
   align-self: center;
 }
