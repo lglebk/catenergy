@@ -34,6 +34,7 @@ $desktop-width: 1300px;
   @media (min-width: $desktop-width) {
     grid-template-columns: 230px auto 246px auto 248px auto 250px;
     gap: unset;
+    margin-bottom: 26px;
   }
 }
 
