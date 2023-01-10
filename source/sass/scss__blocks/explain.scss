@@ -109,25 +109,25 @@ $desktop-width: 1300px;
     }
   }
 
-  &:first-child .explain__img:after {
+  .explain__img--leaf:after {
     background-image: url(/img/icon/leaf.svg);
     left: calc(50% - 12px);
     top: calc(50% - 14px);
   }
 
-  &:nth-child(2) .explain__img:after {
+  .explain__img--boil:after {
     background-image: url(/img/icon/boil.svg);
     left: calc(50% - 15px);
     top: calc(50% - 15px);
   }
 
-  &:nth-child(3) .explain__img:after {
+  .explain__img--meal:after {
     background-image: url(/img/icon/meal.svg);
     left: calc(50% - 13px);
     top: calc(50% - 15px);
   }
 
-  &:last-child .explain__img:after {
+  .explain__img--alarm:after {
     background-image: url(/img/icon/alarm.svg);
     left: calc(50% - 16.5px);
     top: calc(50% - 16.5px);
