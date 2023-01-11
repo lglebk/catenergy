@@ -163,6 +163,7 @@ $desktop-width: 1300px;
 .example__picture {
   margin-bottom: 15px;
   text-align: center;
+
   @media (min-width: $tablet-width) {
     height: 511px;
     margin-bottom: 25px;
@@ -183,7 +184,7 @@ $desktop-width: 1300px;
     position: relative;
 
     width: 86px;
-    height: 16px;
+    height: 14px;
 
     border: #cdcdcd 1px solid;
     border-radius: 6px;
@@ -232,6 +233,10 @@ $desktop-width: 1300px;
   margin: 15px auto 40px;
   display: flex;
   width: 210px;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 125%;
+  background-color: none;
 
   @media (min-width: $tablet-width) {
     margin: 25px auto 56px;
@@ -240,29 +245,33 @@ $desktop-width: 1300px;
 
   @media (min-width: $desktop-width) {
     grid-column: 2/3;
+    align-self: end;
   }
 
   &--input {
     @media (max-width: $tablet-width) {
       display: none;
     }
-
-    @media (min-width: $tablet-width) {
-      width: 426px;
-      height: 6px;
-      border-radius: 6px;
-      background-color: #dcdcdc;
-      margin: 0 13px;
-      border: none;
-    }
   }
+}
 
-  &--desc {
-    width: 49px;
-    text-transform: uppercase;
-    font-size: 16px;
-    line-height: 125%;
-    cursor: pointer;
+/*--------Отработка Было - Стало-----------*/
+
+.example__range--desc {
+  display: block;
+  width: 49px;
+  height: 30px;
+  background-color: #eaeaea;
+  border: none;
+  cursor: pointer;
+
+  span {
+    padding-bottom: 6px;
+
+    &:hover {
+      border-bottom: 1px solid rgb(0, 0, 0, 1);
+      // background-color: #eaeaea;
+    }
 
     @media (min-width: $tablet-width) {
       width: auto;
@@ -270,11 +279,55 @@ $desktop-width: 1300px;
       line-height: 27px;
       text-decoration: dotted;
       border-bottom: 1px dotted rgb(0, 0, 0, 0.75);
-      padding-bottom: 6px;
+    }
+  }
+}
 
-      :hover {
-        border-bottom: 1px solid rgb(0, 0, 0, 1);
-      }
+/*---------Отработка слайдера---------*/
+.example__range {
+  input[type="range"] {
+    width: 426px;
+    height: 6px;
+    border-radius: 6px;
+    background-color: #dcdcdc;
+    margin: 0 13px;
+    border: none;
+    cursor: pointer;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    /*---------Отработка кругляша слайдера---------*/
+
+    &::-webkit-slider-thumb {
+      width: 8px;
+      height: 8px;
+      background-color: $basic-green;
+      border: 12px solid #fff;
+      outline: #cdcdcd 1px solid;
+      border-radius: 50%;
+      position: relative;
+      filter: drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.16));
+
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+
+    &::-moz-range-thumb {
+      width: 8px;
+      height: 8px;
+      background-color: $basic-green;
+      border: 12px solid #fff;
+      outline: #cdcdcd 1px solid;
+      border-radius: 50%;
+      position: relative;
+      filter: drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.16));
+
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
     }
   }
 }

@@ -27,8 +27,14 @@
                 height="38">
             </picture>
 
-            <img class="logo__sign" src="/img/icon/header__logo--mobile-text.svg" alt="Cat Energy." width="101"
-              height="18">
+            <picture>
+              <source media="(min-width: 1300px)" srcset="/img/icon/header__logo--mobile-text.svg" width="118"
+                height="21">
+              <source media="(min-width: 768px)" srcset="/img/icon/header__logo--mobile-text.svg" width="101"
+                height="19">
+              <img class="logo__sign" src="/img/icon/header__logo--mobile-text.svg" alt="Cat Energy." width="101"
+                height="18">
+            </picture>
           </a>
 
           <button class="nav__toggle nav__toggle--opened nav__toggle--closed nav__toggle--nojs" type="button"><span
@@ -171,12 +177,13 @@
 
 
         <div class="example__range">
-          <span class="example__range--desc">Было</span>
-          <button class="example__button example__button--skinny" type="button"></button>
+          <button class="headline example__range--desc" type="button"><span>Было</span></button>
+
+          <div class="example__button example__button--skinny"></div>
 
           <input class="example__range--input" type="range" name="example__range" value="50" min="17" max="83" id="#">
 
-          <span class="example__range--desc ">Стало</span>
+          <button class="headline example__range--desc" type="button"><span>Стало</span></button>
         </div>
       </div>
     </section>
