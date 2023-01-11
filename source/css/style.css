@@ -1627,7 +1627,6 @@ label {
   line-height: 18px;
   text-transform: uppercase;
   color: #444444;
-  font-style: italic;
 }
 
 fieldset {
@@ -1655,67 +1654,184 @@ legend {
   padding: 0;
 }
 
+input[type=radio] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  display: none;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 .form {
   margin: 0;
   padding: 0;
+  border-top: 1px solid #d9d9d9;
 }
 .form__title {
   margin-top: 27px;
   margin-bottom: 37px;
+  line-height: 100%;
+}
+@media (min-width: 768px) {
+  .form__title {
+    margin-top: 64px;
+    margin-bottom: 54px;
+  }
+}
+@media (min-width: 1300px) {
+  .form__title {
+    margin-top: 73px;
+    margin-bottom: 56px;
+  }
 }
 .form__headline {
   margin-bottom: 39px;
 }
-.form__registr {
-  padding: 0;
-  margin-bottom: 27px;
+@media (min-width: 768px) {
+  .form__headline {
+    line-height: 125%;
+    margin-bottom: 66px;
+  }
 }
-.form__stroke {
+
+.form__fields .form__total {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 27px;
+}
+@media (min-width: 768px) {
+  .form__fields .form__total {
+    row-gap: 72px;
+  }
+}
+@media (min-width: 1300px) {
+  .form__fields .form__total {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+  }
+}
+.form__fields .form__registr {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto;
+  row-gap: 14px;
+}
+.form__fields .form__stroke {
   display: flex;
-  padding: 0;
+  width: 100%;
   align-items: center;
-  margin-bottom: 13px;
-  width: 280px;
+  padding: 0;
 }
-.form__label {
+.form__fields .form__label {
   width: auto;
-  padding: 0 13px 0 0px;
+  padding-right: 13px;
   text-align: left;
 }
-.form__input {
+.form__fields .form__input {
+  width: 100%;
   border: 1px solid #e7e7e7;
-  flex: 1;
+  font-size: 16px;
+  line-height: 112%;
+}
+@media (min-width: 768px) {
+  .form__fields .form__input {
+    font-size: 20px;
+    line-height: 135%;
+  }
 }
 
+/*-----Причины обращения------------*/
 .goals {
-  padding-top: 22px;
-  padding-bottom: 19px;
-  border-top: solid 1px #d9d9d9;
-  border-bottom: solid 1px #d9d9d9;
+  display: grid;
+  grid-auto-rows: 30px;
+  row-gap: 13px;
+  padding: 22px 0 22px;
 }
-.goals__input:not(:last-child) {
-  margin-bottom: 13px;
+@media (min-width: 768px) {
+  .goals {
+    padding: 25px 0 25px 28px;
+    border: 1px solid #e7e7e7;
+  }
+}
+.goals .goals__input--radio {
+  position: relative;
+}
+.goals .goals__input--radio::before {
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #cdcdcd;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+}
+.goals input[type=radio]:checked .goals__input--radio::after {
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  border: 1px solid #cdcdcd;
+  background-color: #68b738;
+  top: 0;
+  left: 0;
+}
+.goals .goals__headline {
+  padding-left: 45px;
 }
 
+/*----Контакты владельца---------*/
 .fields__owner {
   margin-top: 26px;
   margin-bottom: 24px;
+  position: relative;
 }
-.fields__owner legend {
-  padding-right: 94px;
-  margin-bottom: 35px;
+.fields__owner:after {
+  position: absolute;
+  content: "";
+  background-color: #68b738;
+  height: 2px;
+  width: 100px;
+  top: 18px;
+  left: -20px;
+}
+.fields__owner:before {
+  position: absolute;
+  content: "";
+  background-color: #68b738;
+  height: 2px;
+  width: 100px;
+  top: 18px;
+  right: 0;
+}
+.fields__owner .owner__strokes {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 14px;
+  margin-top: 35px;
+}
+@media (min-width: 1300px) {
+  .fields__owner .owner__strokes {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    column-gap: 78px;
+  }
 }
 
-.fields__comments {
-  display: flex;
-  justify-content: flex-end;
+/*---------раздел комментариев -----------*/
+.fields__comments .comments__wrap {
+  display: grid;
 }
-.fields__comments legend {
-  margin-bottom: 38px;
-}
-.fields__comments textarea {
-  font-style: italic;
-  margin-bottom: 23px;
+.fields__comments .comments__text {
+  height: 150px;
 }
 
 .fields__additional {
