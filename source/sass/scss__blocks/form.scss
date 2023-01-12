@@ -358,7 +358,7 @@ $desktop-width: 1300px;
   }
 }
 
-.additional__label > .additional__input:checked + span::before {
+.additional__input:checked + span::before {
   background-image: url(/img/icon/tick.svg);
 }
 
