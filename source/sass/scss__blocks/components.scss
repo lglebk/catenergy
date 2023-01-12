@@ -5,6 +5,50 @@ $mobile-width: 320px;
 $tablet-width: 768px;
 $desktop-width: 1300px;
 
+label,
+input,
+textarea {
+  font-size: 16px;
+  line-height: 113%;
+  text-transform: uppercase;
+  color: #444444;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 135%;
+  }
+}
+
+input {
+  padding: 11px 15px 14px;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+textarea {
+  padding: 9px 15px 9px;
+}
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  display: none;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 .title {
   font-family: "Oswald";
   font-style: normal;

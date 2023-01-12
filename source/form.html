@@ -64,122 +64,136 @@
   <main class="page__main main">
 
     <section class="main__form form">
-      <div class="form__wrap wrap">
+      <div class="wrap">
         <h1 class="form__title title">Подбор программы</h1>
         <p class="form__headline headline">Заполните анкету, и мы подберем <br> программу питания для вашего кота</p>
       </div>
 
-      <form class="form__fields fields" action="https://echo.htmlacademy.ru" method="get">
 
-        <div class="form__wrap wrap">
-          <div class="form__total">
-
-            <div class="form__registr registr">
-              <div class="form__stroke">
-                <label class="form__label" for="cat-name">имя:*</label>
-                <input class="form__input" type="text" name="cat-name" id="cat-name" placeholder="Барсик" required>
-              </div>
-              <div class="form__stroke">
-                <label class="form__label" for="cat-weight">вес&nbsp;(кг):*</label>
-                <input class="form__input" type="number" name="cat-weight" id="cat-weight" placeholder="7" required>
-              </div>
-              <div class="form__stroke">
-                <label class="form__label" for="cat-age">возраст&nbsp;(лет):</label>
-                <input class="form__input" type="number" name="cat-age" id="cat-age" placeholder="7">
-              </div>
-            </div>
+      <form class="form__fields form__wrap" action="https://echo.htmlacademy.ru" method="get">
 
 
-            <div class="fields__goals goals">
-
-              <label class="goals__label form__label">
-                <input class="goals__input" type="radio" name="goal" id="weightloss" checked>
-                <span class="goals__input goals__input--radio visually-hidden"></span>
-                <span class="goals__headline headline">Похудение</span>
-              </label>
-
-              <label class="goals__label form__label">
-                <input class="goals__input" type="radio" name="goal" id="weightgrow">
-                <span class="goals__input--radio visually-hidden"></span>
-                <span class="goals__headline headline">Набор массы</span>
-              </label>
-
-              <label class="goals__label form__label">
-                <input class="goals__input" type="radio" name="goal" id="nevermind">
-                <span class="goals__input--radio  visually-hidden"></span>
-                <span class="goals__headline headline">Не знаю (нужен
-                  ваш совет)</span>
-              </label>
-
-            </div>
+        <!-- Контактные данные -->
+        <fieldset class="form__registration">
+          <legend class="visually-hidden">Контактные данные</legend>
+          <div class="form__stroke">
+            <label class="form__label" for="cat-name">имя:*</label>
+            <input class="form__input" type="text" name="cat-name" id="cat-name" placeholder="Барсик" required>
           </div>
-        </div>
-
-
-
-
-        <fieldset class="fields__owner owner">
-          <div class="owner__wrap wrap">
-            <legend class="visually-hidden"></legend><span class="subject">Контактные данные (владельца кота)</span>
-
-            <div class="owner__strokes">
-              <div class="form__stroke">
-                <label class="form__label" for="e-mail">E-MAIL:*</label>
-                <input class="form__input" type="email" name="e-mail" id="e-mail" placeholder="kuklachev@gmail.com"
-                  required>
-              </div>
-              <!-- вставить иконку -->
-              <div class="form__stroke">
-                <label class="form__label" for="phone">ТЕЛЕФОН:* </label>
-                <input class="form__input" type="tel" name="phone" id="phone" placeholder="8 (960) 900-60-90" required>
-              </div>
-              <!-- вставить иконку -->
-            </div>
+          <div class="form__stroke">
+            <label class="form__label" for="cat-weight">вес&nbsp;(кг):*</label>
+            <input class="form__input" type="number" name="cat-weight" id="cat-weight" placeholder="7" required>
+          </div>
+          <div class="form__stroke">
+            <label class="form__label" for="cat-age">возраст&nbsp;(лет):</label>
+            <input class="form__input" type="number" name="cat-age" id="cat-age" placeholder="7">
           </div>
         </fieldset>
 
+        <!-- ---------------Раздел Цель обращения ------------------->
+        <fieldset class="form__goals goals">
+          <legend class="visually-hidden">Цель обращения</legend>
+          <label class="goals__label form__label">
+            <input class="goals__input" type="radio" name="goal" id="weightloss" checked>
+            <span class="goals__input goals__input--radio visually-hidden"></span>
+            <span class="goals__headline headline">Похудение</span>
+          </label>
+          <label class="goals__label form__label">
+            <input class="goals__input" type="radio" name="goal" id="weightgrow">
+            <span class="goals__input--radio visually-hidden"></span>
+            <span class="goals__headline headline">Набор массы</span>
+          </label>
+          <label class="goals__label form__label">
+            <input class="goals__input" type="radio" name="goal" id="nevermind">
+            <span class="goals__input--radio  visually-hidden"></span>
+            <span class="goals__headline headline">Не знаю (нужен
+              ваш совет)</span>
+          </label>
+        </fieldset>
 
-        <fieldset class="fields__comments comments">
-          <legend></legend><span class="subject">Комментарий</span>
-          <div class="comments__wrap wrap">
-            <textarea class="comments__text" name="about" id="about"
-              rows="6">Расскажите обо всех повадках кота</textarea>
+        <!-- Контактные данные владельца -->
+
+        <fieldset class="form__owner owner">
+
+          <legend class="form__subject"><span>Контактные данные (владельца
+              кота)</span></legend>
+
+
+          <div class="owner__strokes">
+            <div class="form__stroke">
+              <label class="form__label" for="e-mail">E-MAIL:*</label>
+              <input class="form__input" type="email" name="e-mail" id="e-mail" placeholder="kuklachev@gmail.com"
+                required>
+              <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path stroke="#222" stroke-width="1.3"
+                  d="M1.65 5.848v8M18.65 5.848v8M1 13.198h18M1 1.198h18M18.35 3.03 10 9.524 1.65 3.03V1.498h16.7V3.03Z" />
+              </svg>
+            </div>
+            <!-- вставить иконку -->
+            <div class="form__stroke">
+              <label class="form__label" for="phone">ТЕЛЕФОН:* </label>
+              <input class="form__input" type="tel" name="phone" id="phone" placeholder="8 (960) 900-60-90" required>
+              <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#a)" fill="#000">
+                  <path
+                    d="M17.9 9.753H9.4v1.204h8.5l-2.1 2.107.9.903 3.1-3.11a.754.754 0 0 0 0-.904l-3.1-3.11-.9.903 2.1 2.007ZM8.1 19.787v-6.221a.653.653 0 0 0-.6-.602H3.1a1.226 1.226 0 0 0 1.2 1.204h2.5v5.017H3.1a1.784 1.784 0 0 1-1.728-1.02 1.801 1.801 0 0 1-.172-.686V3.431a1.78 1.78 0 0 1 .483-1.25A1.767 1.767 0 0 1 2.9 1.624h3.9v5.017H4.4a1.218 1.218 0 0 0-1.2 1.204h4.4a.649.649 0 0 0 .6-.602V.923A.863.863 0 0 0 7.5.32H3.1a2.99 2.99 0 0 0-2.151.81A3.01 3.01 0 0 0 0 3.23v13.948a2.91 2.91 0 0 0 .772 2.192 2.89 2.89 0 0 0 2.128.919h4.6a.499.499 0 0 0 .6-.502Z" />
+                </g>
+                <defs>
+                  <clipPath id="a">
+                    <path fill="#fff" d="M0 .32h20v20.07H0z" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+            <!-- вставить иконку -->
           </div>
         </fieldset>
 
+        <!-- ------- раздел комментариев ---------------- -->
+        <fieldset class="form__comments comments">
+
+          <legend class="form__subject"><span>Комментарий</span></legend>
+
+
+          <textarea class="comments__text" name="about" id="about" rows="6"
+            placeholder="Расскажите обо всех повадках кота"></textarea>
+
+
+        </fieldset>
+
+        <!-- --------раздел Дополнительно -->
         <fieldset class="fields__additional additional">
-          <legend>Дополнительно</legend>
+          <legend class="form__subject"><span>Дополнительно</span></legend>
+
+
 
           <label class="additional__label">
-            <input class="additional__input" type="checkbox" name="insulin" id="insulin" checked>
-            <span class="visually-hidden"></span>
+            <input class="additional__input form__input" type="checkbox" name="insulin" id="insulin" checked>
             <span class="additional__headline headline">сахарозаменитель</span>
           </label>
 
           <label class="additional__label">
-            <input class="additional__input" type="checkbox" name="water" id="water">
-            <span class="visually-hidden"></span>
+            <input class="additional__input form__input" type="checkbox" name="water" id="water">
             <span class="additional__headline headline">питьевая вода</span>
           </label>
 
           <label class="additional__label">
-            <input class="additional__input" type="checkbox" name="milk" id="milk">
-            <span class="visually-hidden"></span>
+            <input class="additional__input form__input" type="checkbox" name="milk" id="milk">
             <span class="additional__headline headline">молоко</span>
           </label>
 
           <label class="additional__label">
-            <input class="additional__input" type="checkbox" name="vitamins" id="vitamins">
-            <span class="visually-hidden"></span>
+            <input class="additional__input form__input" type="checkbox" name="vitamins" id="vitamins">
             <span class="additional__headline headline">витамины</span>
           </label>
         </fieldset>
 
-        <button class="nav__link headline headline--white button" type="submit">отправить заявку</button>
+        <div class="form__push">
+          <button class="nav__link headline headline--white button" type="submit">отправить заявку</button>
+          <p class="fields__text text">* — Обязательные поля</p>
+        </div>
 
-        <p class="fields__text text">* — Обязательные поля</p>
       </form>
-      </div>
     </section>
 
 
