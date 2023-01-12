@@ -7,6 +7,10 @@ $desktop-width: 1300px;
 
 .main__location {
   position: relative;
+
+  &--grey {
+    background-color: #f2f2f2;
+  }
 }
 
 .location__invite {

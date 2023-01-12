@@ -95,17 +95,17 @@
           <legend class="visually-hidden">Цель обращения</legend>
           <label class="goals__label form__label">
             <input class="goals__input" type="radio" name="goal" id="weightloss" checked>
-            <span class="goals__input goals__input--radio visually-hidden"></span>
+            <span class="goals__input--radio"></span>
             <span class="goals__headline headline">Похудение</span>
           </label>
           <label class="goals__label form__label">
             <input class="goals__input" type="radio" name="goal" id="weightgrow">
-            <span class="goals__input--radio visually-hidden"></span>
+            <span class="goals__input--radio"></span>
             <span class="goals__headline headline">Набор массы</span>
           </label>
           <label class="goals__label form__label">
             <input class="goals__input" type="radio" name="goal" id="nevermind">
-            <span class="goals__input--radio  visually-hidden"></span>
+            <span class="goals__input--radio"></span>
             <span class="goals__headline headline">Не знаю (нужен
               ваш совет)</span>
           </label>
@@ -162,30 +162,30 @@
         </fieldset>
 
         <!-- --------раздел Дополнительно -->
-        <fieldset class="fields__additional additional">
+        <fieldset class="form__additional additional">
           <legend class="form__subject"><span>Дополнительно</span></legend>
 
+          <div class="additional__wrap">
+            <label class="additional__label" for="insulin">
+              <input class="additional__input form__input" type="checkbox" name="adds" id="insulin" checked>
+              <span class="additional__headline headline">сахарозаменитель</span>
+            </label>
 
+            <label class="additional__label" for="water">
+              <input class="additional__input form__input" type="checkbox" name="adds" id="water">
+              <span class="additional__headline headline">питьевая вода</span>
+            </label>
 
-          <label class="additional__label">
-            <input class="additional__input form__input" type="checkbox" name="insulin" id="insulin" checked>
-            <span class="additional__headline headline">сахарозаменитель</span>
-          </label>
+            <label class="additional__label" for="milk">
+              <input class="additional__input form__input" type="checkbox" name="adds" id="milk">
+              <span class="additional__headline headline">молоко</span>
+            </label>
 
-          <label class="additional__label">
-            <input class="additional__input form__input" type="checkbox" name="water" id="water">
-            <span class="additional__headline headline">питьевая вода</span>
-          </label>
-
-          <label class="additional__label">
-            <input class="additional__input form__input" type="checkbox" name="milk" id="milk">
-            <span class="additional__headline headline">молоко</span>
-          </label>
-
-          <label class="additional__label">
-            <input class="additional__input form__input" type="checkbox" name="vitamins" id="vitamins">
-            <span class="additional__headline headline">витамины</span>
-          </label>
+            <label class="additional__label" for="vitamins">
+              <input class="additional__input form__input" type="checkbox" name="adds" id="vitamins">
+              <span class="additional__headline headline">витамины</span>
+            </label>
+          </div>
         </fieldset>
 
         <div class="form__push">
@@ -197,10 +197,10 @@
     </section>
 
 
-    <section class="main__location location">
+    <section class="main__location location main__location--grey">
       <h2 class="location__title visually-hidden">Наш адрес</h2>
       <div class="wrap location__wrap">
-        <div class="location__invite invite">
+        <div class="location__invite invite location__invite">
           <p class="invite__headline headline">приглашаем <br> к сотрудничеству <br> дилеров!</p>
           <address class="invite__text text">ул. Большая <br> Конюшенная, д.&nbsp;19/8 <br> <span>Санкт-Петербург</span>
           </address>
