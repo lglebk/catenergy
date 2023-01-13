@@ -1,18 +1,49 @@
 $basic-green: #68b738;
 $grey-bg: #f2f2f2;
 
+$mobile-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1300px;
+
+.main__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
 .catalog {
   &__title {
     padding-top: 27px;
     padding-bottom: 41px;
     border-top: solid 1px #d9d9d9;
     border-bottom: solid 1px #d9d9d9;
+
+    @media (min-width: $tablet-width) {
+      padding-top: 64px;
+      padding-bottom: 82px;
+      border: none;
+    }
+    @media (min-width: $desktop-width) {
+      padding-top: 74px;
+      padding-bottom: 84px;
+    }
   }
 
   &__cards {
     display: grid;
     grid-template-columns: 1fr;
     row-gap: 11px;
+
+    @media (min-width: $tablet-width) {
+      grid-template-columns: 324px 324px;
+      row-gap: 60px;
+      column-gap: 60px;
+    }
+
+    @media (min-width: $desktop-width) {
+      grid-template-columns: 245px 245px 245px 245px;
+      row-gap: 64px;
+      column-gap: 80px;
+    }
   }
 }
 
