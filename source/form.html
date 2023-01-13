@@ -74,42 +74,43 @@
 
 
         <!-- Контактные данные -->
-        <fieldset class="form__registration">
-          <legend class="visually-hidden">Контактные данные</legend>
-          <div class="form__stroke">
-            <label class="form__label" for="cat-name">имя:*</label>
-            <input class="form__input" type="text" name="cat-name" id="cat-name" placeholder="Барсик" required>
-          </div>
-          <div class="form__stroke">
-            <label class="form__label" for="cat-weight">вес&nbsp;(кг):*</label>
-            <input class="form__input" type="number" name="cat-weight" id="cat-weight" placeholder="7" required>
-          </div>
-          <div class="form__stroke">
-            <label class="form__label" for="cat-age">возраст&nbsp;(лет):</label>
-            <input class="form__input" type="number" name="cat-age" id="cat-age" placeholder="7">
-          </div>
-        </fieldset>
-
-        <!-- ---------------Раздел Цель обращения ------------------->
-        <fieldset class="form__goals goals">
-          <legend class="visually-hidden">Цель обращения</legend>
-          <label class="goals__label form__label">
-            <input class="goals__input" type="radio" name="goal" id="weightloss" checked>
-            <span class="goals__input--radio"></span>
-            <span class="goals__headline headline">Похудение</span>
-          </label>
-          <label class="goals__label form__label">
-            <input class="goals__input" type="radio" name="goal" id="weightgrow">
-            <span class="goals__input--radio"></span>
-            <span class="goals__headline headline">Набор массы</span>
-          </label>
-          <label class="goals__label form__label">
-            <input class="goals__input" type="radio" name="goal" id="nevermind">
-            <span class="goals__input--radio"></span>
-            <span class="goals__headline headline">Не знаю (нужен
-              ваш совет)</span>
-          </label>
-        </fieldset>
+        <div class="form__registration--goals">
+          <fieldset class="form__registration">
+            <legend class="visually-hidden">Контактные данные</legend>
+            <div class="form__stroke">
+              <label class="form__label" for="cat-name">имя:*</label>
+              <input class="form__input" type="text" name="cat-name" id="cat-name" placeholder="Барсик" required>
+            </div>
+            <div class="form__stroke">
+              <label class="form__label" for="cat-weight">вес&nbsp;(кг):*</label>
+              <input class="form__input" type="number" name="cat-weight" id="cat-weight" placeholder="7" required>
+            </div>
+            <div class="form__stroke">
+              <label class="form__label" for="cat-age">возраст&nbsp;(лет):</label>
+              <input class="form__input" type="number" name="cat-age" id="cat-age" placeholder="7">
+            </div>
+          </fieldset>
+          <!-- ---------------Раздел Цель обращения ------------------->
+          <fieldset class="form__goals goals">
+            <legend class="visually-hidden">Цель обращения</legend>
+            <label class="goals__label form__label">
+              <input class="goals__input" type="radio" name="goal" id="weightloss" checked>
+              <span class="goals__input--radio"></span>
+              <span class="goals__headline headline">Похудение</span>
+            </label>
+            <label class="goals__label form__label">
+              <input class="goals__input" type="radio" name="goal" id="weightgrow">
+              <span class="goals__input--radio"></span>
+              <span class="goals__headline headline">Набор массы</span>
+            </label>
+            <label class="goals__label form__label">
+              <input class="goals__input" type="radio" name="goal" id="nevermind">
+              <span class="goals__input--radio"></span>
+              <span class="goals__headline headline">Не знаю (нужен
+                ваш совет)</span>
+            </label>
+          </fieldset>
+        </div>
 
         <!-- Контактные данные владельца -->
 

@@ -127,7 +127,7 @@ $desktop-width: 1300px;
 .form__registration--goals {
   display: grid;
   grid-template-columns: 1fr;
-  row-gap: 27px;
+  row-gap: 24px;
 
   @media (min-width: $tablet-width) {
     row-gap: 72px;
@@ -145,16 +145,12 @@ $desktop-width: 1300px;
   grid-auto-rows: 50px;
   row-gap: 14px;
 
-  margin-bottom: 24px;
-
   @media (min-width: $tablet-width) {
-    margin-bottom: 72px;
     grid-auto-rows: 56px;
   }
 
   @media (min-width: $desktop-width) {
     max-width: 568px;
-    margin-bottom: 0px;
   }
 }
 
@@ -169,15 +165,6 @@ $desktop-width: 1300px;
     padding: 25px 0 25px 28px;
     border: 1px solid #e7e7e7;
     grid-auto-rows: 40px;
-    margin-bottom: 15px;
-  }
-
-  @media (min-width: $desktop-width) {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: calc(50% + 80px);
-    width: 568px;
   }
 }
 
