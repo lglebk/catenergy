@@ -1675,6 +1675,7 @@ input[type=number] {
   margin: 0;
   padding: 0;
   border-top: 1px solid #d9d9d9;
+  overflow: hidden;
 }
 
 .form__title {
@@ -1696,24 +1697,19 @@ input[type=number] {
 }
 
 .form__wrap {
-  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
   padding: 0px 20px;
-  overflow: hidden;
-  max-width: 320px;
-  background-color: #fff;
+  margin: 0 auto;
 }
 @media (min-width: 768px) {
   .form__wrap {
-    max-width: 768px;
     padding: 0px 65px 0 69px;
-    width: auto;
   }
 }
 @media (min-width: 1300px) {
   .form__wrap {
-    max-width: 1300px;
     padding: 0 110px;
-    width: auto;
   }
 }
 
@@ -1733,17 +1729,27 @@ input[type=number] {
   color: #000;
   margin-top: 25px;
   margin-bottom: 35px;
-  position: relative;
+  display: flex;
+  float: left;
+  padding: 0;
 }
 .form__subject:before {
   position: absolute;
   content: "";
   background-color: #68b738;
   height: 2px;
-  width: 100%;
-  top: 18px;
+  margin-top: 18px;
+  right: 0px;
   left: 0;
-  z-index: -1;
+  z-index: 0;
+  box-sizing: border-box;
+}
+.form__subject span {
+  background-color: #fff;
+  margin-left: -22px;
+  padding: 0 22px;
+  z-index: 1;
+  position: relative;
 }
 @media (min-width: 768px) {
   .form__subject {
@@ -1752,6 +1758,14 @@ input[type=number] {
     margin-top: 64px;
     margin-bottom: 76px;
   }
+  .form__subject:before {
+    margin-top: 22px;
+  }
+  .form__subject span {
+    width: auto;
+    margin-left: -42px;
+    padding: 0 42px;
+  }
 }
 @media (min-width: 1300px) {
   .form__subject {
@@ -1759,9 +1773,10 @@ input[type=number] {
     margin-bottom: 76px;
   }
 }
-.form__subject span {
-  background-color: #fff;
-  padding-right: 14px;
+
+.form__subject--clear {
+  clear: both;
+  width: auto;
 }
 
 .form__fields {
@@ -2050,9 +2065,8 @@ body {
 
 .wrap {
   margin: 0 auto;
-  padding: 0px 20px;
   overflow: hidden;
-  max-width: 320px;
+  width: 280px;
 }
 @media (min-width: 768px) {
   .wrap {

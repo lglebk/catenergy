@@ -9,6 +9,7 @@ $desktop-width: 1300px;
   margin: 0;
   padding: 0;
   border-top: 1px solid #d9d9d9;
+  overflow: hidden;
 }
 
 .form__title {
@@ -28,22 +29,17 @@ $desktop-width: 1300px;
 }
 
 .form__wrap {
-  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
   padding: 0px 20px;
-  overflow: hidden;
-  max-width: $mobile-width;
-  background-color: #fff;
+  margin: 0 auto;
 
   @media (min-width: $tablet-width) {
-    max-width: $tablet-width;
     padding: 0px 65px 0 69px;
-    width: auto;
   }
 
   @media (min-width: $desktop-width) {
-    max-width: $desktop-width;
     padding: 0 110px;
-    width: auto;
   }
 }
 
@@ -62,19 +58,31 @@ $desktop-width: 1300px;
   color: #000;
   margin-top: 25px;
   margin-bottom: 35px;
-  position: relative;
 
-  // ХЗ что делать
+  display: flex;
+  float: left;
+  padding: 0;
 
   &:before {
     position: absolute;
     content: "";
     background-color: $basic-green;
+
     height: 2px;
-    width: 100%;
-    top: 18px;
+    margin-top: 18px;
+    right: 0px;
     left: 0;
-    z-index: -1;
+    z-index: 0;
+    box-sizing: border-box;
+  }
+  // ХЗ что делать
+
+  span {
+    background-color: #fff;
+    margin-left: -22px;
+    padding: 0 22px;
+    z-index: 1;
+    position: relative;
   }
 
   @media (min-width: $tablet-width) {
@@ -82,17 +90,27 @@ $desktop-width: 1300px;
     line-height: 100%;
     margin-top: 64px;
     margin-bottom: 76px;
+
+    &:before {
+      margin-top: 22px;
+    }
+
+    span {
+      width: auto;
+      margin-left: -42px;
+      padding: 0 42px;
+    }
   }
 
   @media (min-width: $desktop-width) {
     margin-top: 68px;
     margin-bottom: 76px;
   }
+}
 
-  span {
-    background-color: #fff;
-    padding-right: 14px;
-  }
+.form__subject--clear {
+  clear: both;
+  width: auto;
 }
 
 .form__fields {

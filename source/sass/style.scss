@@ -33,9 +33,10 @@ body {
 
 .wrap {
   margin: 0 auto;
-  padding: 0px 20px;
   overflow: hidden;
-  max-width: $mobile-width;
+  width: calc($mobile-width - 40px);
+  // padding: 0px 20px;
+  // width: $mobile-width;
 
   @media (min-width: $tablet-width) {
     max-width: $tablet-width;
