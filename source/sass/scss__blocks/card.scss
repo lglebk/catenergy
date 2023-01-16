@@ -14,35 +14,27 @@ $desktop-width: 1300px;
     "img characters"
     "button button";
   position: relative;
-  padding: 11px 0 14px;
   box-sizing: border-box;
   align-self: end;
+  border-bottom: 1px solid red;
+  padding: 19px 0 14px;
 
   @media (min-width: $tablet-width) {
     grid-template-columns: 1fr;
-    grid-template-rows: 234px auto auto auto;
+    grid-template-rows: repeat(4, auto);
     grid-template-areas:
       "img"
       "title"
       "characters"
       "button";
     padding: 0 36px 40px;
-    row-gap: 0;
   }
   @media (min-width: $desktop-width) {
     grid-template-rows: 242px auto auto auto;
+    padding: 0 38px 40px;
   }
 
   &::before {
-    @media (max-width: $tablet-width) {
-      content: "";
-      position: absolute;
-      width: 100%;
-      bottom: -11px;
-      left: 0;
-      height: 1px;
-      background-color: #d9d9d9;
-    }
     @media (min-width: $tablet-width) {
       content: "";
       position: absolute;
@@ -63,6 +55,7 @@ $desktop-width: 1300px;
   margin-bottom: 18px;
   margin-top: 0;
   color: #222222;
+  padding-right: 64px;
 
   grid-area: title;
   align-self: end;
@@ -73,11 +66,16 @@ $desktop-width: 1300px;
     font-size: 20px;
     line-height: 120%;
     margin-bottom: 21px;
+
+    padding-right: 35px;
+    padding-left: 42px;
   }
 
   @media (min-width: $desktop-width) {
     line-height: 105%;
     margin-bottom: 21px;
+    padding-right: 15px;
+    padding-left: 20px;
   }
 }
 
@@ -89,8 +87,11 @@ $desktop-width: 1300px;
 
   @media (min-width: $tablet-width) {
     align-self: end;
+    margin-bottom: 34px;
   }
-
+  @media (min-width: $desktop-width) {
+    margin-bottom: 46px;
+  }
   .card__img {
   }
 }

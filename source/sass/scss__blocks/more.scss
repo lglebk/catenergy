@@ -21,14 +21,14 @@ $desktop-width: 1300px;
   box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
-    padding: 53px 36px 36px 36px;
+    padding: 45px 36px 36px 36px;
     align-self: end;
     border: 2px solid $grey-bg;
     margin-top: 0;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 51px 36px 41px 36px;
+    padding: 45px 36px 40px 36px;
   }
 
   @media (max-width: $tablet-width) {
@@ -46,11 +46,12 @@ $desktop-width: 1300px;
 
 .more__title {
   text-align: center;
-  padding-top: 53px;
-  margin-bottom: 8px;
+  padding: 53px 0 0;
   grid-area: more__title;
   align-self: end;
   position: relative;
+  text-align: center;
+  margin-bottom: 0;
 
   &::before {
     position: absolute;
@@ -76,7 +77,7 @@ $desktop-width: 1300px;
 
   @media (min-width: $tablet-width) {
     padding: 109px 54px 0px;
-    margin-bottom: 23px;
+    margin-bottom: 0;
 
     &::before {
       height: 60px;
@@ -88,23 +89,29 @@ $desktop-width: 1300px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 109px 17px 23px;
-    margin-bottom: 0;
+    padding: 109px 17px 0;
+    margin-bottom: 0px;
   }
 }
 
 .more__subtitle {
   grid-area: more__subtitle;
-  margin-top: 0;
   margin-bottom: 21px;
+  margin-top: 8px;
 
   @media (min-width: $tablet-width) {
+    margin-top: 23px;
     padding: 0 40px 0px;
     margin-bottom: 87px;
+    font-size: 16px;
+    line-height: 133%;
   }
   @media (min-width: $desktop-width) {
     padding-left: 0;
     padding-right: 0;
+    font-size: 16px;
+    line-height: 133%;
+
     // padding-bottom: 87px;
   }
 }
