@@ -2113,7 +2113,6 @@ input[type=number] {
   position: relative;
   box-sizing: border-box;
   align-self: end;
-  border-bottom: 1px solid red;
   padding: 19px 0 14px;
 }
 @media (min-width: 768px) {
@@ -2122,6 +2121,7 @@ input[type=number] {
     grid-template-rows: repeat(4, auto);
     grid-template-areas: "img" "title" "characters" "button";
     padding: 0 36px 40px;
+    border: none;
   }
 }
 @media (min-width: 1300px) {
@@ -2153,6 +2153,11 @@ input[type=number] {
   padding-right: 64px;
   grid-area: title;
   align-self: end;
+}
+@media (max-width: 768px) {
+  .card__title br {
+    display: none;
+  }
 }
 @media (min-width: 768px) {
   .card__title {
@@ -2377,6 +2382,8 @@ input[type=number] {
   background-color: #fff;
 }
 .additional__wrap {
+  clear: both;
+  width: auto;
   grid-template-columns: 1fr;
   grid-auto-rows: auto;
 }
@@ -2401,8 +2408,6 @@ input[type=number] {
   row-gap: 14px;
   padding: 13px 0 20px;
   margin: 0;
-  border-top: 1px solid #cdcdcd;
-  border-bottom: 1px solid #cdcdcd;
   grid-template-areas: "add-title" "add-characters" "add-button";
 }
 @media (min-width: 768px) {

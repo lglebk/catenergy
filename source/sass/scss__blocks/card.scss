@@ -16,7 +16,6 @@ $desktop-width: 1300px;
   position: relative;
   box-sizing: border-box;
   align-self: end;
-  border-bottom: 1px solid red;
   padding: 19px 0 14px;
 
   @media (min-width: $tablet-width) {
@@ -28,6 +27,7 @@ $desktop-width: 1300px;
       "characters"
       "button";
     padding: 0 36px 40px;
+    border: none;
   }
   @media (min-width: $desktop-width) {
     grid-template-rows: 242px auto auto auto;
@@ -59,6 +59,12 @@ $desktop-width: 1300px;
 
   grid-area: title;
   align-self: end;
+
+  @media (max-width: $tablet-width) {
+    br {
+      display: none;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     text-align: center;
